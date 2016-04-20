@@ -1,1 +1,129 @@
 /* Empty. Add your own CSS if you like */
+/*基础样式*/
+
+/*内边距*/
+.padding-small-top,
+.padding-small-vertical{
+  padding-top: 2px;
+}
+
+.padding-small-bottom,
+.padding-small-vertical{
+  padding-bottom: 2px;
+}
+
+.padding-small-left,
+.padding-small-horizontal{
+  padding-left: 2px;
+}
+
+.padding-small-right,
+.padding-small-horizontal{
+  padding-right: 2px;
+}
+
+.padding-small{
+  padding: 2px;
+}
+
+.padding-normal-top,
+.padding-normal-vertical{
+  padding-top: 2px;
+}
+
+.padding-normal-bottom,
+.padding-normal-vertical{
+  padding-bottom: 2px;
+}
+
+.padding-normal-left,
+.padding-normal-horizontal{
+  padding-left: 2px;
+}
+
+.padding-normal-right,
+.padding-normal-horizontal{
+  padding-right: 2px;
+}
+
+.padding-normal{
+  padding: 5px;
+}
+
+/*背景色*/
+.bg-color-white{
+  background-color: #FFFFFF;
+}
+
+.bg-color-main{
+  background-color: #EEEEEE;
+}
+
+
+/*tabs样式*/
+.hm-tabs>.tabs{
+  padding-top: 3px;
+}
+
+.hm-tabs>.tabs .icon{
+  height: 27px;
+  font-size: 25px;
+}
+
+.hm-tabs>.tabs{
+  background: #FFFFFF;
+}
+
+.hm-tabs>.tabs .tab-item{
+  opacity: 1;
+}
+
+.hm-tab-item-publish,
+.hm-tab-item-publish.tab-item-active,
+.hm-tab-item-publish.activated,
+.hm-tab-item-publish.active{
+  color: #666666!important;
+}
+
+.hm-tabs>.tabs .tab-item{
+  color: #666666;
+}
+
+.hm-tabs>.tabs .tab-item.tab-item-active,
+.hm-tabs>.tabs .tab-item.activated,
+.hm-tabs>.tabs .tab-item.active
+{
+  color: #FF4E72;
+}
+
+.hm-tab-item-publish .icon-center{
+  width: 24px;
+  height: 24px;
+  content: ' ';
+}
+
+.hm-tab-item-publish .icon-center:before{
+  position: absolute;
+  font-size: 32px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  border: 4px solid #F8F8F8;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  display: block;
+  top: -12px;
+  margin-left: -9px;
+  background-color: #F8F8F8;
+  color: #FF4E72;
+}
+
+.hm-tab-badge{
+  background-color: #FF4E72!important;
+  opacity: 0.7;
+  right: 33%;
+  right: calc(50% - 20px)!important;
+  right: -webkit-calc(50% - 20px)!important;
+}
+

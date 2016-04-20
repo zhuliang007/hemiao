@@ -1,20 +1,20 @@
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+<ion-tabs class="tabs-icon-top hm-tabs ">
   <!-- Home Tab -->
   <ion-tab title="首页" icon="iconfont ion-hm-home" href="#/tabs/home">
     <ion-nav-view name="tabs-home"></ion-nav-view>
   </ion-tab>
 
   <!-- Buy Tab -->
-  <ion-tab title="求购" icon="iconfont ion-hm-home" href="#/tabs/buy">
+  <ion-tab title="求购" icon="iconfont ion-hm-shopping" href="#/tabs/buy">
     <ion-nav-view name="tabs-buy"></ion-nav-view>
   </ion-tab>
 
   <!-- Publish Tab -->
-  <ion-tab title="发布" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ng-click="openModal(1)">
+  <ion-tab title="发布" icon="iconfont ion-hm-add icon-center" ng-click="openModal(1)" class="hm-tab-item-publish">
   </ion-tab>
 
   <!-- Message Tab -->
-  <ion-tab title="消息" icon="iconfont ion-hm-message"href="#/tabs/message">
+  <ion-tab title="消息" icon="iconfont ion-hm-message"href="#/tabs/message" badge="2" badge-style="hm-tab-badge">
     <ion-nav-view name="tabs-message"></ion-nav-view>
   </ion-tab>
 
