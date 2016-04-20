@@ -1,28 +1,51 @@
 angular.module('starter.controllers', [])
+  .controller('StartCtrl', function($scope,$state,$ionicModal) {
+    $state.go("tabs.home")
+    setPublishSelectModal();
 
-.controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+    $scope.openModal = function(modalType){
+      console.log(modalType);
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-})
+      switch(modalType){
+        case 1:
+          $scope.openPublishSelectModal();
+              break;
+      }
+    }
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+    function setPublishSelectModal(){
+      $ionicModal.fromTemplateUrl("templates/modal/hm-modal-publish-select.html",{
+        scope:$scope,
+        animation:"slide-in-up"
+      }).then(function(modal){
+        $scope.publishSelectModal = modal;
+      })
+
+      $scope.openPublishSelectModal = function() {
+        $scope.publishSelectModal.show();
+      };
+      $scope.closePublishSelectModal = function() {
+        $scope.publishSelectModal.hide();
+      };
+    }
+  })
+
+  .controller('HomeCtrl', function($scope) {
+
+  })
+
+  .controller('BuyCtrl', function($scope) {
+  })
+
+  .controller('MsgCtrl', function($scope) {
+  })
+
+
+  .controller('PersonalCtrl', function($scope) {
+  })
+
+  .controller('PublishSelectCtrl', function($scope) {
+  })
+
