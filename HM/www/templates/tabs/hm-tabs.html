@@ -1,0 +1,26 @@
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+  <!-- Home Tab -->
+  <ion-tab title="首页" icon="iconfont ion-hm-home" href="#/tabs/home">
+    <ion-nav-view name="tabs-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Buy Tab -->
+  <ion-tab title="求购" icon="iconfont ion-hm-home" href="#/tabs/buy">
+    <ion-nav-view name="tabs-buy"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Publish Tab -->
+  <ion-tab title="发布" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ng-click="openModal(1)">
+  </ion-tab>
+
+  <!-- Message Tab -->
+  <ion-tab title="消息" icon="iconfont ion-hm-message"href="#/tabs/message">
+    <ion-nav-view name="tabs-message"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Personal Tab -->
+  <ion-tab title="我的" icon="iconfont ion-hm-personal" href="#/tabs/personal">
+    <ion-nav-view name="tabs-personal"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
