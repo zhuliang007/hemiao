@@ -1,5 +1,17 @@
 <ion-view>
+  <ion-header-bar align-title="center" class="hm-bar-assertive">
+    <h1 class="title">禾苗</h1>
+    <div class="buttons">
+      <button class="button"><i class="icon iconfont ion-hm-search"></i></button>
+    </div>
+    <div class="address">上海<i class="icon iconfont ion-hm-arrow-down"></i></div>
+  </ion-header-bar>
   <ion-content class="bg-color-main">
-    Hello Home
+
+    <ion-infinite-scroll
+      on-infinite="loadMore()"
+      distance="1%"
+      immediate-check="false">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>

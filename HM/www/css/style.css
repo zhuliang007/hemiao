@@ -59,6 +59,31 @@
   background-color: #EEEEEE;
 }
 
+/*字体颜色*/
+.color-dark-strong{
+  color: #333333;
+}
+
+.color-dark-normal{
+  color: #666666;
+}
+
+.color-dark-thin{
+  color: #999999;
+}
+
+.color-light-normal{
+  color: #FFFFFF;
+}
+
+.color-divide-normal{
+  color: #DDDDDD;
+}
+
+.color-assertive{
+  color: #FF4E72;
+}
+
 
 /*loading样式*/
 /*.spinner svg {
@@ -70,6 +95,39 @@
 
 .hm-loading-msg{
   margin: 0px;
+}
+
+/*bar样式*/
+.hm-bar-assertive,
+.hm-bar-assertive .button{
+  background-color: #FF4E72;
+}
+
+.hm-bar-assertive .title{
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.hm-bar-assertive .title,
+.hm-bar-assertive .button,
+.hm-bar-assertive .address{
+  color: #FFFFFF;
+}
+
+.hm-bar-assertive .address{
+  position: absolute;
+  z-index:999;
+  vertical-align: bottom;
+  bottom: 7px;
+  left: 50%;
+  left: calc(50% + 40px)!important;
+  left: -webkit-calc(50% + 40px)!important;
+
+}
+
+.hm-bar-assertive .button.activated{
+  background: #FF8A9A;
 }
 
 /*tabs样式*/
@@ -120,14 +178,14 @@
   -webkit-border-radius:50%;
   -moz-border-radius:50%;
   border-radius:50%;
-  border: 4px solid #F8F8F8;
+  border: 4px solid #FFFFFF;
   width: 45px;
   height: 45px;
   text-align: center;
   display: block;
-  top: -12px;
+  top: -15px;
   margin-left: -9px;
-  background-color: #F8F8F8;
+  background-color: #FFFFFF;
   color: #FF4E72;
 }
 

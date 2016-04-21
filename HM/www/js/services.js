@@ -14,6 +14,18 @@ angular.module('starter.services', [])
       })
     }
 
+    $rootScope.openModal = function(modalType){
+      console.log(modalType);
+      switch(modalType){
+        case 1:
+          $modal.openModal(config.modals.publishSelectModal.modal);
+          break;
+        case 2:
+          $modal.openModal(config.modals.loginModal.modal);
+          break;
+      }
+    }
+
     $rootScope.closeModal = function(modalType) {
       switch (modalType) {
         case 1:

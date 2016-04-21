@@ -3,23 +3,19 @@ angular.module('starter.controllers', [])
     $state.go("tabs.home")
     $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);
     $modal.init(config.modals.loginModal.modal,config.modals.loginModal.templateUrl);
-
-    $scope.openModal = function(modalType){
-      console.log(modalType);
-      switch(modalType){
-        case 1:
-          $modal.openModal(config.modals.publishSelectModal.modal);
-          break;
-        case 2:
-          $modal.openModal(config.modals.loginModal.modal);
-          break;
-      }
-    }
-
-    $loading.showLoadingWithContent("正在加载中，请稍候...",5000);
+    //$loading.showLoadingWithContent("正在加载中，请稍候...",5000);
   }])
 
   .controller('HomeCtrl', ["$scope","$timeout","$loading",function($scope, $timeout, $loading) {
+    $scope.loadMore = function() {
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+      $scope.loadMore();
+    });
+
+
 
   }])
 
