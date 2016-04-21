@@ -60,6 +60,18 @@
 }
 
 
+/*loading样式*/
+/*.spinner svg {
+  width: 32px;
+  height: 32px;
+  stroke: red;
+  fill: blue;
+}*/
+
+.hm-loading-msg{
+  margin: 0px;
+}
+
 /*tabs样式*/
 .hm-tabs>.tabs{
   padding-top: 3px;

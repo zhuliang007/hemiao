@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic' ,'starter.controllers', 'starter.services'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -32,55 +32,51 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     $stateProvider
 
     // setup an abstract state for the tabs directive
-      .state('tabs', {
-        url: '/tabs',
+      .state(config.controllers.tabs.name, {
+        url: config.controllers.tabs.url,
         abstract: true,
-        templateUrl: 'templates/tabs/hm-tabs.html'
+        templateUrl: config.controllers.tabs.templateUrl
       })
 
       // Each tab has its own nav history stack:
 
-      .state('tabs.home', {
-        url: '/home',
+      .state(config.controllers.tabsHome.name, {
+        url: config.controllers.tabsHome.url,
         views: {
           'tabs-home': {
-            templateUrl: 'templates/tabs/hm-tabs-home.html',
-            controller: 'HomeCtrl'
+            templateUrl: config.controllers.tabsHome.templateUrl,
+            controller: config.controllers.tabsHome.controller
           }
         }
       })
 
-      .state('tabs.buy', {
-        url: '/buy',
+      .state(config.controllers.tabsShopping.name, {
+        url: config.controllers.tabsShopping.url,
         views: {
-          'tabs-buy': {
-            templateUrl: 'templates/tabs/hm-tabs-buy.html',
-            controller: 'BuyCtrl'
+          'tabs-shopping': {
+            templateUrl: config.controllers.tabsShopping.templateUrl,
+            controller: config.controllers.tabsShopping.controller
           }
         }
       })
 
-      .state('tabs.message', {
-        url: '/message',
+      .state(config.controllers.tabsMessage.name, {
+        url: config.controllers.tabsMessage.url,
         views: {
           'tabs-message': {
-            templateUrl: 'templates/tabs/hm-tabs-message.html',
-            controller: 'MsgCtrl'
+            templateUrl: config.controllers.tabsMessage.templateUrl,
+            controller: config.controllers.tabsMessage.controller
           }
         }
       })
 
-      .state('tabs.personal', {
-        url: '/personal',
+      .state(config.controllers.tabsPersonal.name, {
+        url: config.controllers.tabsPersonal.url,
         views: {
           'tabs-personal': {
-            templateUrl: 'templates/tabs/hm-tabs-personal.html',
-            controller: 'PersonalCtrl'
+            templateUrl: config.controllers.tabsPersonal.templateUrl,
+            controller: config.controllers.tabsPersonal.controller
           }
         }
       })
-
-    // if none of the above states are matched, use this as the fallback
-    //$urlRouterProvider.otherwise('/tab/dash');
-
   });

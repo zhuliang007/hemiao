@@ -1,42 +1,29 @@
 angular.module('starter.controllers', [])
-  .controller('StartCtrl', function($scope,$state,$ionicModal) {
+  .controller('StartCtrl', ["$scope","$state","$modal","$loading",function($scope,$state,$modal,$loading) {
     $state.go("tabs.home")
-    setPublishSelectModal();
-
+    $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);
+    $modal.init(config.modals.loginModal.modal,config.modals.loginModal.templateUrl);
 
     $scope.openModal = function(modalType){
       console.log(modalType);
-
       switch(modalType){
         case 1:
-          $scope.openPublishSelectModal();
-              break;
+          $modal.openModal(config.modals.publishSelectModal.modal);
+          break;
+        case 2:
+          $modal.openModal(config.modals.loginModal.modal);
+          break;
       }
     }
 
+    $loading.showLoadingWithContent("正在加载中，请稍候...",5000);
+  }])
 
-    function setPublishSelectModal(){
-      $ionicModal.fromTemplateUrl("templates/modal/hm-modal-publish-select.html",{
-        scope:$scope,
-        animation:"slide-in-up"
-      }).then(function(modal){
-        $scope.publishSelectModal = modal;
-      })
+  .controller('HomeCtrl', ["$scope","$timeout","$loading",function($scope, $timeout, $loading) {
 
-      $scope.openPublishSelectModal = function() {
-        $scope.publishSelectModal.show();
-      };
-      $scope.closePublishSelectModal = function() {
-        $scope.publishSelectModal.hide();
-      };
-    }
-  })
+  }])
 
-  .controller('HomeCtrl', function($scope) {
-
-  })
-
-  .controller('BuyCtrl', function($scope) {
+  .controller('ShoppingCtrl', function($scope) {
   })
 
   .controller('MsgCtrl', function($scope) {
