@@ -3,6 +3,15 @@
  */
 
 var config = {
+  requestUrl:{
+    test:"http://192.168.100.67:8080/",
+    publish:""
+  },
+  filePath:{
+    userHead:"image/userHead/",
+    adImg:"image/adImg/",
+    productImg:"image/productImg/"
+  },
   modals:{
     publishSelectModal:{
       modal:"publishSelectModal",

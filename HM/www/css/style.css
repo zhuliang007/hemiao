@@ -1,5 +1,9 @@
 /* Empty. Add your own CSS if you like */
 /*基础样式*/
+img{
+  width: 100%!important;
+  height: auto!important;
+}
 
 /*内边距*/
 .padding-small-top,
@@ -98,6 +102,9 @@
 }
 
 /*bar样式*/
+.hm-bar-assertive{
+  background-image: none;
+}
 .hm-bar-assertive,
 .hm-bar-assertive .button{
   background-color: #FF4E72;
@@ -195,5 +202,23 @@
   right: 33%;
   right: calc(50% - 20px)!important;
   right: -webkit-calc(50% - 20px)!important;
+}
+
+
+.main-content{
+  padding-top: 0px!important;
+}
+
+/*home首页*/
+.zs-header{
+  height: 12px;
+  background-image: url("../img/line/zs.png");
+  -webkit-background-size: 21px 12px;
+  background-size: 21px 12px;
+  background-repeat: repeat-x;
+}
+
+.swiper-ad-home{
+  width: 100%;
 }
 

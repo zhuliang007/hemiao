@@ -20,9 +20,21 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    {
+      "locator": "https://github.com/pwlin/cordova-plugin-file-opener2.git",
+      "id": "cordova-plugin-file-opener2"
+    },
+    {
+      "locator": "https://github.com/litehelpers/Cordova-sqlite-storage.git",
+      "id": "cordova-sqlite-storage"
+    },
+    "cordova-plugin-network-information"
   ],
   "cordovaPlatforms": [
-    "ios"
+    "ios",
+    "android"
   ]
 }

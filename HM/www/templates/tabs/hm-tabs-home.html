@@ -6,12 +6,28 @@
     </div>
     <div class="address">上海<i class="icon iconfont ion-hm-arrow-down"></i></div>
   </ion-header-bar>
-  <ion-content class="bg-color-main">
+  <ion-content class="bg-color-main main-content">
+    <!--<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>-->
 
-    <ion-infinite-scroll
+    <div class="zs-header"></div>
+    <div class="swiper-container swiper-ad-home">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" ng-repeat="ad in ads track by $index"><img ng-src={{ad}}></div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--<ion-infinite-scroll
       on-infinite="loadMore()"
       distance="1%"
       immediate-check="false">
-    </ion-infinite-scroll>
+    </ion-infinite-scroll>-->
   </ion-content>
 </ion-view>
