@@ -23,6 +23,7 @@
 .ion-hm-new-other:before { content: "\e600"; }
 .ion-hm-rmb:before { content: "\e605"; }
 .ion-hm-search:before { content: "\e612"; }
+.ion-hm-jujia:before { content: "\e614"; }
 .ion-hm-heart:before { content: "\e603"; }
 .ion-hm-skin:before { content: "\e604"; }
 .ion-hm-new:before { content: "\e606"; }
@@ -38,3 +39,4 @@
 .ion-hm-read-number:before { content: "\e609"; }
 .ion-hm-personal:before { content: "\e602"; }
 .ion-hm-add:before { content: "\e60e"; }
+.ion-hm-tuijian:before { content: "\e615"; }

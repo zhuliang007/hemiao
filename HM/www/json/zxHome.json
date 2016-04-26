@@ -1,0 +1,52 @@
+{
+  "zxs":[
+    {
+      "userInfo":{
+        "userName":"shuhao1989",
+        "userHeaderImage":"/default1.png"
+      },
+      "productInfo":{
+        "productTitle":"苹果手机苹果手机苹果手机苹果手机",
+        "productPublishTime":"2016-04-26 17:46:00",
+        "productPrice":"3490",
+        "productPriceSale":"2999",
+        "productCity":"上海市 杨浦区 飞虹路568弄",
+        "readers":"526",
+        "replays":"665",
+        "productImages":["/default3.png","/default6.png","/default9.png"]
+      }
+    },
+    {
+      "userInfo":{
+        "userName":"shuhao1989",
+        "userHeaderImage":"/default2.png"
+      },
+      "productInfo":{
+        "productTitle":"苹果手机苹果手机苹果手机苹果手机",
+        "productPublishTime":"2016-03-10 12:30:00",
+        "productPrice":"3490",
+        "productPriceSale":"",
+        "productCity":"上海市 杨浦区 飞虹路568弄",
+        "readers":"526",
+        "replays":"665",
+        "productImages":["/default1.png","/default4.png","/default7.png"]
+      }
+    },
+    {
+      "userInfo":{
+        "userName":"shuhao1989",
+        "userHeaderImage":"/default3.png"
+      },
+      "productInfo":{
+        "productTitle":"苹果手机苹果手机苹果手机苹果手机",
+        "productPublishTime":"2015-4-12 12:30:00",
+        "productPrice":"3490",
+        "productPriceSale":"2999",
+        "productCity":"上海市 杨浦区 飞虹路568弄",
+        "readers":"526",
+        "replays":"665",
+        "productImages":["/default2.png","/default5.png","/default8.png"]
+      }
+    }
+  ]
+}

@@ -95,26 +95,17 @@ angular.module('starter.services', [])
   }])
 
   /*文件操作*/
-  /*.factory("$file",["$ionicPopup","$cordovaFile","$cordovaFileTransfer","$q",function($ionicPopup,$cordovaFile,$cordovaFileTransfer,$q){
+  .factory("$file",["$ionicPopup","$cordovaFile","$cordovaFileTransfer","$q",function($ionicPopup,$cordovaFile,$cordovaFileTransfer,$q){
 
     var $file = {};
 
     $file.filePath = "";
 
-    $file.show = function(msg,title){
-      $ionicPopup.alert({
-        title: title||'message',
-        template: msg
-      });
-    }
-
-    $file.setPath = function(){
-      if(window.cordova){
-        if(ionic.Platform.isAndroid()){
-          $file.filePath = cordova.file.externalDataDirectory
-        }else if(ionic.Platform.isIOS()){
-          $file.filePath = cordova.file.documentsDirectory
-        }
+    $file.setPath = function(cordova){
+      if(ionic.Platform.isAndroid()){
+        $file.filePath = cordova.file.externalDataDirectory
+      }else if(ionic.Platform.isIOS()){
+        $file.filePath = cordova.file.documentsDirectory
       }
     }
 
@@ -122,28 +113,45 @@ angular.module('starter.services', [])
       return $file.filePath;
     }
 
-    $file.checkFile = function(targetPath,fileName){
+    $file.checkFile = function(targetPath,fileUrl){
+      var fileName = fileUrl.substring(fileUrl.lastIndexOf("/")+1);
       var deferred  = $q.defer();
       $cordovaFile.checkFile(targetPath,fileName)
         .then(function(result){
+          deferred.resolve(result.nativeURL);
+        },function(){
+          deferred.reject(fileName);
+        })
+      return deferred.promise;
+    }
+
+    $file.checkFileByIndex = function(targetPath,fileUrl,index) {
+      var fileName = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
+      var deferred = $q.defer();
+      $cordovaFile.checkFile(targetPath, fileName)
+        .then(function (result) {
+          var result = {"imageUrl": result.nativeURL, "index": index}
           deferred.resolve(result);
-        },function(result){
+        }, function () {
+          var result = {"imageUrl": fileName, "index": index}
           deferred.reject(result);
         })
       return deferred.promise;
     }
 
-    $file.checkFiles = function(targetPath,files,success,error){
-      for(var file in files){
-        $cordovaFile.checkFile(targetPath,files[file].fileName)
-          .then(function(result){
-            success("success==="+files[file].fileName)
-          },function(result){
-            error("error==="+files[file].fileName)
-          })
-      }
+    $file.checkFileByObject = function(targetPath,fileUrl,object) {
+      var fileName = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
+      var deferred = $q.defer();
+      $cordovaFile.checkFile(targetPath, fileName)
+        .then(function (result) {
+          var result = {"imageUrl": result.nativeURL, "object": object}
+          deferred.resolve(result);
+        }, function () {
+          var result = {"imageName": fileName, "object": object}
+          deferred.reject(result);
+        })
+      return deferred.promise;
     }
-
 
     $file.downloadFile = function(url,targetPath){
       var deferred  = $q.defer();
@@ -157,7 +165,7 @@ angular.module('starter.services', [])
     }
 
     return $file;
-  }])*/
+  }])
 
   .factory("$swiper",function(){
 
@@ -168,18 +176,9 @@ angular.module('starter.services', [])
     $swiper.init = function(element,option){
       var swiper  = new Swiper(element,option);
       $swiper.swipers[element] =  swiper;
-      console.log($swiper.swipers)
+      return swiper;
     }
 
-    $swiper.update = function(element){
-      $swiper.swipers[element].updateContainerSize();
-      $swiper.swipers[element].updateSlidesSize();
-      $swiper.swipers[element].updateProgress();
-      $swiper.swipers[element].updatePagination();
-      $swiper.swipers[element].updateClasses();
-      $swiper.swipers[element].update(true);
-      $swiper.swipers[element].reLoop();
-    }
 
     return $swiper;
   })

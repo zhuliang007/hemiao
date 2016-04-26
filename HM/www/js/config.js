@@ -5,12 +5,13 @@
 var config = {
   requestUrl:{
     test:"http://192.168.100.67:8080/",
-    publish:""
+    publish:"",
+    img:""
   },
   filePath:{
-    userHead:"image/userHead/",
-    adImg:"image/adImg/",
-    productImg:"image/productImg/"
+    userHead:"img/userHead/",
+    adImg:"img/adImg/",
+    productImg:"img/productImg/"
   },
   modals:{
     publishSelectModal:{
