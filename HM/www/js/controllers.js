@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
   .controller('StartCtrl', ["$ionicPlatform","$scope","$state","$modal","$toast","$file",function($ionicPlatform,$scope,$state,$modal,$toast,$file) {
     $ionicPlatform.ready(function(){
-      $state.go("tabs.home")
+      $state.go("tabs.home");
       $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);
       $modal.init(config.modals.loginModal.modal,config.modals.loginModal.templateUrl);
       //$toast.showLoadingWithContent("正在加载中，请稍候...");
@@ -9,7 +9,6 @@ angular.module('starter.controllers', [])
         $file.setPath(cordova);
       }
     })
-  }])
 
   .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$file","$ionicPopup",
     function($scope, $timeout,$swiper,$http,$toast,$file,$ionicPopup) {
@@ -25,7 +24,7 @@ angular.module('starter.controllers', [])
       //头部广告设置带有轮播
       $http.get("json/adHome.json").success(function(result) {
         var ads = result.ads;
-        $scope.ads = []
+        $scope.ads = [];
         for(var i = 0 ; i<ads.length ; i++){
           var requestUrl = ads[i].fileName.substring(0,ads[i].fileName.lastIndexOf("/")) ?
             ads[i].fileName.substring(0,ads[i].fileName.lastIndexOf("/")) : config.requestUrl.test+config.filePath.adImg;
@@ -163,7 +162,48 @@ angular.module('starter.controllers', [])
 
     }])
 
-  .controller('ShoppingCtrl', function($scope) {
+  .controller('ShoppingCtrl', function($scope,$ionicPopover) {
+
+    $scope.items = [
+      {name: "最新发布", value: 0},
+      {name: "浏览最多", value: 1},
+      {name: "已解决", value: 2},
+      {name: "未解决", value: 3}
+    ];
+
+
+    //筛选条件弹出框
+    var template = '';
+    $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html',{
+      scope:$scope
+    }).then(function(popover){
+      $scope.popover = popover;
+    });
+
+    $scope.openPopover = function($event) {
+      $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+      $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+      // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+      // Execute action
+    });
+
+    //触发选择事件
+    $scope.clickStatus = function(value){
+      $scope.popover.remove();
+    }
+
   })
 
   .controller('MsgCtrl', function($scope) {
