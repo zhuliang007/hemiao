@@ -88,6 +88,60 @@ angular.module('starter.controllers', [])
         }
       }
 
+
+      /*var map = new BMap.Map("bdMap");          // 创建地图实例
+       var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+       map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+
+       map.addControl(new BMap.NavigationControl());
+       map.addControl(new BMap.ScaleControl());
+       map.addControl(new BMap.OverviewMapControl());
+       map.addControl(new BMap.MapTypeControl());
+
+       var geolocation = new BMap.Geolocation();
+       geolocation.getCurrentPosition(function(r){
+       if(this.getStatus() == BMAP_STATUS_SUCCESS){
+       var mk = new BMap.Marker(r.point);
+       map.addOverlay(mk);
+       map.panTo(r.point);
+       var geoc = new BMap.Geocoder();
+       geoc.getLocation(r.point, function(rs){
+       var addComp = rs.addressComponents;
+       alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+       });
+       }
+       else {
+       alert('failed'+this.getStatus());
+       }
+       },{enableHighAccuracy: true})*/
+      //百度定位
+      var map = null;
+      getLocation();
+      function getLocation(){
+        if(!map){
+          map = new BMap.Map("bdMap");          // 创建地图实例
+          var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+          map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+        }
+
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+          if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            var geoc = new BMap.Geocoder();
+            geoc.getLocation(r.point, function(rs){
+              var addComp = rs.addressComponents;
+              console.log(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+            });
+          }
+          else {
+            alert('failed'+this.getStatus());
+          }
+        },{enableHighAccuracy: true})
+      }
+
     }])
 
   .controller('ShoppingCtrl', function($scope) {

@@ -13,15 +13,13 @@
       on-refresh="doRefresh()">
     </ion-refresher>
 
+    <div id="bdMap" class="hide"></div>
+
     <div class="swiper-container swiper-ad-home margin-big-bottom">
       <div class="swiper-wrapper">
         <div class="swiper-slide" ng-repeat="ad in ads track by $index"><img ng-src={{ad.fileName}}></div>
       </div>
-      <div class="swiper-pagination swiper-pagination-ad-home swiper-pagination-bullets">
-        <!--<span  ng-repeat="ad in ads track by $index" ng-class="getPaginationClass($index)"></span>-->
-        <!--class="swiper-pagination-bullet" ng-if="ads.length>1"-->
-        <!--<span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>-->
+      <div class="swiper-pagination swiper-pagination-ad-home">
       </div>
     </div>
 
