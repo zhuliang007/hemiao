@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
   /*模态框*/
-  .factory("$modal",["$rootScope","$ionicModal",function($rootScope,$ionicModal){
+  .factory("$modal",["$rootScope","$ionicModal","$state",function($rootScope,$ionicModal,$state){
     var $modal = {};
 
     $modal.modal = null;
@@ -15,7 +15,6 @@ angular.module('starter.services', [])
     }
 
     $rootScope.openModal = function(modalType){
-      console.log(modalType);
       switch(modalType){
         case 1:
           $modal.openModal(config.modals.publishSelectModal.modal);
@@ -24,6 +23,18 @@ angular.module('starter.services', [])
           $modal.openModal(config.modals.loginModal.modal);
           break;
       }
+    }
+
+    $rootScope.goPublish = function(publishType){
+      switch (publishType){
+        case 1:
+          $state.go(config.controllers.publishSale.name)
+              break;
+        case 2:
+          $state.go(config.controllers.publishShopping.name)
+              break;
+      }
+      $rootScope.closeModal(1);
     }
 
     $rootScope.closeModal = function(modalType) {

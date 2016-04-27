@@ -94,4 +94,16 @@ angular.module('starter', ['ionic','ngCordova' ,'starter.controllers', 'starter.
           }
         }
       })
+
+      .state(config.controllers.publishSale.name,{
+        url: config.controllers.publishSale.url,
+        templateUrl:config.controllers.publishSale.templateUrl,
+        controller:config.controllers.publishSale.controller
+      })
+
+      .state(config.controllers.publishShopping.name,{
+        url: config.controllers.publishShopping.url,
+        templateUrl:config.controllers.publishShopping.templateUrl,
+        controller:config.controllers.publishShopping.controller
+      })
   });

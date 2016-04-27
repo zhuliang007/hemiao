@@ -161,10 +161,12 @@ angular.module('starter.controllers', [])
   .controller('MsgCtrl', function($scope) {
   })
 
-
   .controller('PersonalCtrl', function($scope) {
   })
 
-  .controller('PublishSelectCtrl', function($scope) {
+  .controller('publishSaleCtrl', function($scope) {
+  })
+
+  .controller('publishShoppingCtrl', function($scope) {
   })
 

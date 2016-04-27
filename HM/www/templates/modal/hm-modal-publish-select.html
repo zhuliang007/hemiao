@@ -1,9 +1,14 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">My Modal title</h1>
-    <button ng-click="closeModal(1)">取消</button>
-  </ion-header-bar>
-  <ion-content>
-    Hello Publish Select!
-  </ion-content>
+<ion-modal-view class="bg-color-modal-darkness">
+
+  <div class="hm-publish-select text-center text-size-bigger hm-publish-select-sale" ng-click="goPublish(1)">
+    <i class="icon iconfont ion-hm-sale bg-color-main-red padding-big hm-border-round"></i>
+    <p class="text-size-small no-margin-bottom padding-normal-top">出售</p>
+  </div>
+
+  <div class="hm-publish-select text-center text-size-bigger hm-publish-select-shopping" ng-click="goPublish(2)">
+    <i class="icon iconfont ion-hm-shopping bg-color-main-red padding-big hm-border-round"></i>
+    <p class="text-size-small no-margin-bottom padding-normal-top">求购</p>
+  </div>
+
+  <div class="hm-publish-select-close text-size-big text-center hm-border-round" ng-click="closeModal(1)"><i class="icon iconfont ion-close"></i></div>
 </ion-modal-view>

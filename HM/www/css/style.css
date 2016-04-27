@@ -199,6 +199,10 @@ img{
   background-color: #FE6F5C;
 }
 
+.bg-color-modal-darkness{
+  background-color: rgba(0,0,0,.8);
+}
+
 /*字体颜色*/
 .color-dark-strong{
   color: #333333;
@@ -489,9 +493,15 @@ img{
   color: #FF4E72;
   left: 50%;
   left: calc(50% - 45px);
+  left: -webkit-calc(50% - 45px);
   top: 20%;
   top: calc(20% + 5px);
+  top: -webkit-calc(20% + 5px);
   padding: 0px 20px;
+}
+
+.hm-home-card + .hm-home-card{
+  border-top: 1px solid #DDDDDD;
 }
 /*购物*/
 .shopping-popover >.popover-arrow:after{
@@ -515,7 +525,49 @@ img{
   color:white;
 }
 
-.hm-home-card + .hm-home-card{
-  border-top: 1px solid #DDDDDD;
+
+/*发布*/
+.hm-publish-select{
+  position: absolute;
+  z-index:2;
+  bottom: 80px;
+  color: #FFFFFF;
 }
+
+.hm-publish-select-sale{
+  left: 30%;
+  left: calc(30% - 20px);
+  left: -webkit-calc(30% - 20px);
+}
+
+.hm-publish-select-shopping{
+  right: 30%;
+  right: calc(30% - 20px);
+  right: -webkit-calc(30% - 20px);
+}
+
+.hm-publish-select > i{
+  border: 2px solid #FFFFFF;
+}
+
+
+
+.hm-publish-select-close{
+  position: absolute;
+  z-index:2;
+  background-color: #FFFFFF;
+  color: #FF4E72;
+  line-height: 36px;
+  width: 40px;
+  padding-bottom: 3px;
+  bottom: 20px;
+  left: 30%;
+  left: calc(50% - 20px);
+  left: -webkit-calc(50% - 20px);
+}
+
+
+
+
+
 
