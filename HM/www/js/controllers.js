@@ -1,4 +1,5 @@
 angular.module('starter.controllers', [])
+<<<<<<< HEAD
   .controller('StartCtrl', ["$ionicPlatform","$scope","$state","$modal","$toast","$file",function($ionicPlatform,$scope,$state,$modal,$toast,$file) {
     $ionicPlatform.ready(function () {
       $state.go("tabs.home");
@@ -9,21 +10,21 @@ angular.module('starter.controllers', [])
         $file.setPath(cordova);
       }
     });
+=======
+  .controller('StartCtrl', ["$scope","$state","$modal","$toast",function($scope,$state,$modal,$toast) {
+    $state.go("tabs.home")
+    $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);
+    $modal.init(config.modals.loginModal.modal,config.modals.loginModal.templateUrl);
+    //$toast.showLoadingWithContent("正在加载中，请稍候...");
+>>>>>>> origin/master
   }])
 
-  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$file","$ionicPopup",
-    function($scope, $timeout,$swiper,$http,$toast,$file,$ionicPopup) {
-
-      /*$scope.loadMore = function() {
-       $scope.$broadcast('scroll.infiniteScrollComplete');
-       };
-
-       $scope.$on('$stateChangeSuccess', function() {
-       $scope.loadMore();
-       });*/
+  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup",
+    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup) {
 
       //头部广告设置带有轮播
       $http.get("json/adHome.json").success(function(result) {
+<<<<<<< HEAD
         var ads = result.ads;
         $scope.ads = [];
         for(var i = 0 ; i<ads.length ; i++){
@@ -49,6 +50,9 @@ angular.module('starter.controllers', [])
             $scope.ads.push(ads[i]);
           }
         }
+=======
+        $scope.ads = result.ads;
+>>>>>>> origin/master
         $timeout(function(){
           var swiperOption = $scope.ads.length>1 ?
           { direction: "horizontal",
@@ -67,8 +71,12 @@ angular.module('starter.controllers', [])
           };
           $swiper.init(".swiper-ad-home",swiperOption);
         },500)
+<<<<<<< HEAD
       });
 
+=======
+      })
+>>>>>>> origin/master
       //求购信息
       $http.get("json/qgHome.json").success(function(result) {
         $scope.qgGroups = result.qgs;
@@ -87,50 +95,52 @@ angular.module('starter.controllers', [])
           };
           $swiper.init(".swiper-qg-home",swiperOption)
         },500)
+<<<<<<< HEAD
 
 
       });
 
       //
       $scope.zxItems = [];
+=======
+      });
+      initView();
+>>>>>>> origin/master
 
       $scope.getTime = function(time){
         return $.format.prettyDate(time);
       };
+<<<<<<< HEAD
+=======
 
-      $http.get("json/zxHome.json").success(function(result) {
-        var zxs = result.zxs;
-        for(var i = 0 ; i < zxs.length ; i++){
+      $scope.loadMore = function() {
+        getNewProduct();
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      };
 
-          var userHeadImage = zxs[i].userInfo.userHeaderImage;
-          var requestUserHeaderImgUrl = userHeadImage.substring(0,userHeadImage.lastIndexOf("/")) ?
-            userHeadImage.substring(0,userHeadImage.lastIndexOf("/")):config.requestUrl.test+config.filePath.userHead;
-          var userHeadFileName = userHeadImage.substring(userHeadImage.lastIndexOf("/")+1);
-          var userHeadFileUrl = requestUserHeaderImgUrl+ userHeadFileName;
+      $scope.$on('$stateChangeSuccess', function() {
+        $scope.loadMore();
+      });
 
-          if(window.cordova){
-            $file.checkFileByObject($file.getPath(),userHeadFileUrl,zxs[i])
-              .then(function(result){
-                var item = result.object;
-                item.userInfo.userHeaderImage = result.imageUrl;
-                $scope.zxItems.push(item);
+      $scope.doRefresh = function() {
+        initView();
+        $scope.$broadcast('scroll.refreshComplete');
+      };
 
-                checkProductImages(item);
+      function initView(){
+        $scope.zxItems = [];
+        //最新商品
+        getNewProduct()
+      }
+>>>>>>> origin/master
 
-              },function(result){
-                var item = result.object;
-                item.userInfo.userHeaderImage = requestUserHeaderImgUrl + result.imageName;
-                $scope.zxItems.push(item);
-                $file.downloadFile(requestUserHeaderImgUrl + result.imageName,$file.getPath()+result.imageName);
-                checkProductImages(item);
-              })
-          }
-          else{
-            zxs[i].userInfo.userHeaderImage = config.filePath.userHead + userHeadFileName;
-            $scope.zxItems.push(zxs[i]);
-            checkProductImages(zxs[i]);
-          }
+      function getNewProduct(){
+        $http.get("json/zxHome.json").success(function(result) {
+          addNewItem(result.zxs);
+        });
+      }
 
+<<<<<<< HEAD
           function checkProductImages(item){
            $timeout(function(){
              var productImages =  item.productInfo.productImages;
@@ -158,8 +168,13 @@ angular.module('starter.controllers', [])
              }
            },500);
           }
+=======
+      function addNewItem(items){
+        for(var item in items){
+          $scope.zxItems.push(items[item]);
+>>>>>>> origin/master
         }
-      })
+      }
 
     }])
 
