@@ -1,14 +1,15 @@
 angular.module('starter.controllers', [])
   .controller('StartCtrl', ["$ionicPlatform","$scope","$state","$modal","$toast","$file",function($ionicPlatform,$scope,$state,$modal,$toast,$file) {
-    $ionicPlatform.ready(function(){
+    $ionicPlatform.ready(function () {
       $state.go("tabs.home");
-      $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);
-      $modal.init(config.modals.loginModal.modal,config.modals.loginModal.templateUrl);
+      $modal.init(config.modals.publishSelectModal.modal, config.modals.publishSelectModal.templateUrl);
+      $modal.init(config.modals.loginModal.modal, config.modals.loginModal.templateUrl);
       //$toast.showLoadingWithContent("正在加载中，请稍候...");
-      if(window.cordova){
+      if (window.cordova) {
         $file.setPath(cordova);
       }
-    })
+    });
+  }])
 
   .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$file","$ionicPopup",
     function($scope, $timeout,$swiper,$http,$toast,$file,$ionicPopup) {
@@ -44,7 +45,7 @@ angular.module('starter.controllers', [])
               })
           }
           else{
-            ads[i].fileName = config.filePath.adImg + fileName
+            ads[i].fileName = config.filePath.adImg + fileName;
             $scope.ads.push(ads[i]);
           }
         }
@@ -63,10 +64,10 @@ angular.module('starter.controllers', [])
             loop: false,
             autoplayDisableOnInteraction:false,
             autoHeight:true
-          }
+          };
           $swiper.init(".swiper-ad-home",swiperOption);
         },500)
-      })
+      });
 
       //求购信息
       $http.get("json/qgHome.json").success(function(result) {
@@ -83,19 +84,19 @@ angular.module('starter.controllers', [])
             direction: "vertical",
             loop: false,
             autoplayDisableOnInteraction:false,
-          }
+          };
           $swiper.init(".swiper-qg-home",swiperOption)
         },500)
 
 
-      })
+      });
 
       //
       $scope.zxItems = [];
 
       $scope.getTime = function(time){
         return $.format.prettyDate(time);
-      }
+      };
 
       $http.get("json/zxHome.json").success(function(result) {
         var zxs = result.zxs;
@@ -142,11 +143,11 @@ angular.module('starter.controllers', [])
                if(window.cordova){
                  $file.checkFileByObject($file.getPath(),requestProductFileUrl,j)
                    .then(function(result){
-                     var index = result.object
+                     var index = result.object;
                      productImages[index] = result.imageUrl
 
                    },function(result){
-                     var index = result.object
+                     var index = result.object;
                      productImages[index] = requestProductImgUrl + result.imageName;
                      $file.downloadFile(requestProductImgUrl + result.imageName,$file.getPath()+result.imageName);
                    })
@@ -215,4 +216,3 @@ angular.module('starter.controllers', [])
 
   .controller('PublishSelectCtrl', function($scope) {
   })
-
