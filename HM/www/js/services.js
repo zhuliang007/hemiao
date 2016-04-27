@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['shoppings.services'])
   /*模态框*/
   .factory("$modal",["$rootScope","$ionicModal","$state",function($rootScope,$ionicModal,$state){
     var $modal = {};
