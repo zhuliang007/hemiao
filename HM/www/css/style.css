@@ -482,16 +482,37 @@ img{
   top: 50%;
 }
 
-.hm-home-zx .title{
+.hm-home-zx .title {
   position: absolute;
   z-index: 2;
   background-color: #F5F5F5;
   color: #FF4E72;
-  left:50%;
+  left: 50%;
   left: calc(50% - 45px);
   top: 20%;
   top: calc(20% + 5px);
   padding: 0px 20px;
+}
+/*购物*/
+.shopping-popover >.popover-arrow:after{
+  background-color: #535353;
+}
+
+.shopping-status{
+  text-align: center;
+  border-bottom: 1px solid #737373;
+  color: white;
+  height: 34px;
+  line-height:2;
+}
+
+.platform-ios .popover .scroll-content{
+  margin:0px;
+}
+.shopping-title .title{
+  font-size: 24px;
+  font-style: normal;
+  color:white;
 }
 
 .hm-home-card + .hm-home-card{

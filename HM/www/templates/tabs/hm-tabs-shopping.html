@@ -1,5 +1,25 @@
 <ion-view>
+  <!--header-->
+  <ion-header-bar align-title="center" class="hm-bar-assertive shopping-title">
+    <h1 class="title ">求购列表</h1>
+    <div class="buttons">
+      <!--筛选-->
+      <div class="button icon-left ion-arrow-down-b" ng-click="openPopover($event)">筛选</div>
+    </div>
+  </ion-header-bar>
   <ion-content class="bg-color-main">
-    Hello buy
+    <!--下拉刷新-->
+    <ion-refresher></ion-refresher>
   </ion-content>
+
+  <script id="my-popover.html" type="text/ng-template">
+    <ion-popover-view class="col-50 shopping-popover" style="height: 24%;background-color: #535353;">
+      <ion-content >
+        <!--筛选模版-->
+        <div class="shopping-status" ng-click="clickStatus(item.value)" ng-repeat="item in items" ng-bind="item.name">
+        </div>
+      </ion-content>
+    </ion-popover-view>
+
+  </script>
 </ion-view>
