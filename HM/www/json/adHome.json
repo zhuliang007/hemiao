@@ -1,9 +1,9 @@
 {
   "ads":[{
-    "fileName":"http://192.168.100.67:8080/img/adImg/350x100.png"
+    "fileName":"http://192.168.100.67:8080/img/adImg/300x100.png"
   },{
-    "fileName":"http://192.168.100.67:8080/img/adImg/700x200.png"
+    "fileName":"http://192.168.100.67:8080/img/adImg/450x150.png"
   },{
-    "fileName":"http://192.168.100.67:8080/img/adImg/525x150.png"
+    "fileName":"http://192.168.100.67:8080/img/adImg/600x200.png"
   }]
 }

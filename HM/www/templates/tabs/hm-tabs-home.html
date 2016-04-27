@@ -17,13 +17,13 @@
 
     <div class="swiper-container swiper-ad-home margin-big-bottom">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" ng-repeat="ad in ads track by $index"><img ng-src={{ad.fileName}}></div>
+        <div class="swiper-slide" ng-repeat="ad in ads track by $index"><a><img ng-src={{ad.fileName}}></a></div>
       </div>
       <div class="swiper-pagination swiper-pagination-ad-home">
       </div>
     </div>
 
-    <div class="bg-color-white padding-horizontal">
+    <a class="bg-color-white padding-horizontal block color-dark-strong no-text-decoration" href="#/tabs/shopping">
       <div class="row hm-border-normal-bottom">
         <div class="col"><div class="text-center"><i class="icon iconfont ion-hm-tuijian hm-home-type bg-color-yellow"></i></div><div class="text-center color-dark-normal margin-small-top">官方推荐</div></div>
         <div class="col"><div class="text-center"><i class="icon iconfont ion-hm-pram hm-home-type bg-color-main-green"></i></div><div class="text-center color-dark-normal margin-small-top">宝宝用品</div></div>
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </a>
 
     <div class="hm-home-zx">
       <div class="line"></div>
