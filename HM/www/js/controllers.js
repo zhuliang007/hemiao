@@ -116,7 +116,7 @@ angular.module('starter.controllers', [])
 
     }])
 
-  .controller('ShoppingCtrl', function($scope,$ionicPopover) {
+  .controller('ShoppingCtrl', ['$scope','$ionicPopover',function($scope,$ionicPopover) {
     $scope.items = [
       {name: "最新发布", value: 0},
       {name: "浏览最多", value: 1},
@@ -156,7 +156,7 @@ angular.module('starter.controllers', [])
     $scope.clickStatus = function(value){
       $scope.popover.hide();
     }
-  })
+  }])
 
   .controller('MsgCtrl', function($scope) {
   })
