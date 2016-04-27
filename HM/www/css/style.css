@@ -509,4 +509,9 @@ img{
 .platform-ios .popover .scroll-content{
   margin:0px;
 }
+.shopping-title .title{
+  font-size: 24px;
+  font-style: normal;
+  color:white;
+}
 

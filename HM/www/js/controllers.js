@@ -202,7 +202,7 @@ angular.module('starter.controllers', [])
 
     //触发选择事件
     $scope.clickStatus = function(value){
-      $scope.popover.remove();
+      $scope.popover.hide();
     }
 
   })
