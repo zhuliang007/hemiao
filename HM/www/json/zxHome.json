@@ -3,7 +3,7 @@
     {
       "userInfo":{
         "userName":"shuhao1989",
-        "userHeaderImage":"/default1.png"
+        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default1.png"
       },
       "productInfo":{
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
@@ -13,13 +13,15 @@
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":["/default3.png","/default6.png","/default9.png"]
+        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"}
+        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"},
+          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"}]
       }
     },
     {
       "userInfo":{
         "userName":"shuhao1989",
-        "userHeaderImage":"/default2.png"
+        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default2.png"
       },
       "productInfo":{
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
@@ -29,13 +31,15 @@
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":["/default1.png","/default4.png","/default7.png"]
+        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"}
+        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"},
+          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"}]
       }
     },
     {
       "userInfo":{
         "userName":"shuhao1989",
-        "userHeaderImage":"/default3.png"
+        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default3.png"
       },
       "productInfo":{
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
@@ -45,7 +49,9 @@
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":["/default2.png","/default5.png","/default8.png"]
+        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"}
+        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"},
+          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"}]
       }
     }
   ]

@@ -95,7 +95,7 @@ angular.module('starter.services', [])
   }])
 
   /*文件操作*/
-  .factory("$file",["$ionicPopup","$cordovaFile","$cordovaFileTransfer","$q",function($ionicPopup,$cordovaFile,$cordovaFileTransfer,$q){
+  /*.factory("$file",["$ionicPopup","$cordovaFile","$cordovaFileTransfer","$q",function($ionicPopup,$cordovaFile,$cordovaFileTransfer,$q){
 
     var $file = {};
 
@@ -120,24 +120,12 @@ angular.module('starter.services', [])
         .then(function(result){
           deferred.resolve(result.nativeURL);
         },function(){
-          deferred.reject(fileName);
-        })
-      return deferred.promise;
-    }
-
-    $file.checkFileByIndex = function(targetPath,fileUrl,index) {
-      var fileName = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
-      var deferred = $q.defer();
-      $cordovaFile.checkFile(targetPath, fileName)
-        .then(function (result) {
-          var result = {"imageUrl": result.nativeURL, "index": index}
-          deferred.resolve(result);
-        }, function () {
-          var result = {"imageUrl": fileName, "index": index}
+          var result = {"fileUrl":fileUrl,"targetPath":targetPath+fileName};
           deferred.reject(result);
         })
       return deferred.promise;
     }
+
 
     $file.checkFileByObject = function(targetPath,fileUrl,object) {
       var fileName = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
@@ -165,8 +153,9 @@ angular.module('starter.services', [])
     }
 
     return $file;
-  }])
+  }])*/
 
+  /*轮播*/
   .factory("$swiper",function(){
 
     var $swiper = {}
@@ -178,7 +167,6 @@ angular.module('starter.services', [])
       $swiper.swipers[element] =  swiper;
       return swiper;
     }
-
 
     return $swiper;
   })

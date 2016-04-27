@@ -8,15 +8,21 @@
   </ion-header-bar>
   <div class="hm-zs-header"></div>
   <ion-content class="bg-color-main main-content">
-    <!--<ion-refresher
-      pulling-text="Pull to refresh..."
+    <ion-refresher
+      pulling-text="下拉刷新..."
       on-refresh="doRefresh()">
-    </ion-refresher>-->
+    </ion-refresher>
+
     <div class="swiper-container swiper-ad-home margin-big-bottom">
       <div class="swiper-wrapper">
         <div class="swiper-slide" ng-repeat="ad in ads track by $index"><img ng-src={{ad.fileName}}></div>
       </div>
-      <div class="swiper-pagination swiper-pagination-ad-home"></div>
+      <div class="swiper-pagination swiper-pagination-ad-home swiper-pagination-bullets">
+        <!--<span  ng-repeat="ad in ads track by $index" ng-class="getPaginationClass($index)"></span>-->
+        <!--class="swiper-pagination-bullet" ng-if="ads.length>1"-->
+        <!--<span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>-->
+      </div>
     </div>
 
     <div class="bg-color-white padding-horizontal">
@@ -64,7 +70,7 @@
         </div>
         <div class="row no-padding-bottom">
           <div class="col col-33 padding-small-horizontal no-padding-bottom" ng-repeat="productImage in zxItem.productInfo.productImages track by $index">
-            <img ng-src="{{productImage}}" title="{{productImage}}">
+            <img ng-src={{productImage.imgUrl}}>
           </div>
         </div>
         <p class="padding-big-horizontal margin-small-bottom color-dark-strong text-max-height-normal text-size-normal" ng-bind="zxItem.productInfo.productTitle"></p>
@@ -89,15 +95,10 @@
       </div>
     </div>
 
-
-
-
-
-
-    <!--<ion-infinite-scroll
+    <ion-infinite-scroll
       on-infinite="loadMore()"
       distance="1%"
       immediate-check="false">
-    </ion-infinite-scroll>-->
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>
