@@ -84,10 +84,15 @@ angular.module('shoppings.controllers', [])
       $scope.loadMore();
     })
 
-
-
     $scope.getTime = function(time){
       return $.format.prettyDate(time);
     };
 
+  }])
+  .controller('shopDetailCtrl',['$scope','$state',function($scope,$state){
+
+    $scope.shopBack = function(){
+      $state.go("tabs.shopping");
+    }
+    console.log($state.params.detailId);
   }])

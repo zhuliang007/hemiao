@@ -92,3 +92,58 @@
 .shop-time{
   font-size:12px;
 }
+
+.shop-button .icon:before, .shop-button .button.button-icon:before, .shop-button .button.button-icon.icon-left:before, .shop-button .button.button-icon.icon-right:before, .shop-button button.button-icon .icon:before, .shop-button button.button-icon:before, .shop-button button.button-icon.icon-left:before, .shop-button button.button-icon.icon-right:before {
+  font-size: 20px;
+  line-height:42px;
+}
+
+.shop-button .button.button-icon{
+  font-size:1px;
+  line-height:42px;
+  min-height:100%;
+
+}
+.shop-button > .button + .button:last-child{
+  top:0;
+  right:0;
+  bottom:0;
+}
+.shop-button .button{
+  font-size:15px;
+  line-height:42px;
+}
+.shop-recommend{
+  background-color: #FF4E72;
+  color:white;
+  border-radius:0px;
+}
+
+.shop-recommend:hover{
+  color:white;
+}
+
+.shop-detail-title{
+  height:60px;
+}
+
+.shop-detail-title >span{
+  line-height: 33px;
+}
+
+.shop-detail-title >span:first-child{
+  font-size:20px;
+  font-weight: bolder;
+}
+.shop-detail-title >span:last-child{
+  font-size:16px;
+  color:#9F9F9F;
+}
+
+.shop-contact{
+  border-left: 1px solid #E6E6E6;
+  border-radius:0px;
+  background-color: white;
+  min-width: 100%;
+}
+

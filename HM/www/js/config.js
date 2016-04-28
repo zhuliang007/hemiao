@@ -82,6 +82,13 @@ var config = {
       name:"publishShopping",
       controller:"publishShoppingCtrl"
     }
+  },
+  //求购商品详情
+  shopDetail:{
+    templateUrl:"templates/publish/shopDetail.html",
+    url:"/shopDetail/:detailId",
+    name:"shopDetail",
+    controller:"shopDetailCtrl"
   }
 }
 

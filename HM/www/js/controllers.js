@@ -19,3 +19,4 @@ angular.module('starter.controllers', ['shoppings.controllers','home.controllers
   .controller('publishShoppingCtrl', function($scope) {
   })
 
+

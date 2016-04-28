@@ -11,8 +11,8 @@
     <!--下拉刷新-->
     <ion-refresher pulling-text="refresher" on-refresh="doRefresh()"></ion-refresher>
 
-    <div class="bg-color-white margin-big-bottom hm-home-card-groups" >
-      <div class="hm-home-card" ng-repeat="item in userInfoitems ">
+    <div class="bg-color-white margin-big-bottom hm-home-card-groups" ng-repeat="item in userInfoitems ">
+      <div class="hm-home-card" ui-sref="shopDetail({detailId:item.userInfo.userName})">
         <div class="row padding-big-horizontal text-size-small">
           <div class="col col-20 col-center no-padding">
             <div class="col col-80 col-offset-10 no-padding col-center">
@@ -42,7 +42,7 @@
     </div>
 
     <!--上拉刷新-->
-    <ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%" immediate-check="false"></ion-infinite-scroll>
   </ion-content>
 
   <script id="my-popover.html" type="text/ng-template">

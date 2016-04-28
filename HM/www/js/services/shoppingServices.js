@@ -25,7 +25,7 @@ angular.module('shoppings.services', [])
     }
 
     loadMore = function(){
-      return $http.post("json/zxHome.json","",function(data){
+      return $http.get("json/zxHome.json",function(data){
         return data;
       })
     }

@@ -106,4 +106,10 @@ angular.module('starter', ['ionic','ngCordova' ,'starter.controllers', 'starter.
         templateUrl:config.controllers.publishShopping.templateUrl,
         controller:config.controllers.publishShopping.controller
       })
+
+      .state(config.shopDetail.name,{
+        url: config.shopDetail.url,
+        templateUrl:config.shopDetail.templateUrl,
+        controller:config.shopDetail.controller
+      })
   });
