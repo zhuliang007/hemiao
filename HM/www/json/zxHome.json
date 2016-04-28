@@ -6,6 +6,7 @@
         "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default1.png"
       },
       "productInfo":{
+        "productStatus":1,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"2016-04-26 17:46:00",
         "productPrice":"3490",
@@ -20,10 +21,11 @@
     },
     {
       "userInfo":{
-        "userName":"shuhao1989",
+        "userName":"里斯",
         "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default2.png"
       },
       "productInfo":{
+        "productStatus":1,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"2016-03-10 12:30:00",
         "productPrice":"3490",
@@ -38,10 +40,11 @@
     },
     {
       "userInfo":{
-        "userName":"shuhao1989",
+        "userName":"王五",
         "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default3.png"
       },
       "productInfo":{
+        "productStatus":0,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"2015-4-12 12:30:00",
         "productPrice":"3490",

@@ -7,37 +7,42 @@
       <div class="button icon-left ion-arrow-down-b" ng-click="openPopover($event)">筛选</div>
     </div>
   </ion-header-bar>
-  <ion-content class="bg-color-main">
+  <ion-content class="bg-color-main" >
     <!--下拉刷新-->
-    <ion-refresher></ion-refresher>
+    <ion-refresher pulling-text="refresher" on-refresh="doRefresh()"></ion-refresher>
 
     <div class="bg-color-white margin-big-bottom hm-home-card-groups" >
-      <div class="row padding-big-horizontal text-size-small">
-        <div class="col col-20 col-center no-padding">
-          <div class="col col-80 col-offset-10 no-padding col-center">
-            <img src="img/adam.jpg" class="hm-border-round margin-normal-top">
+      <div class="hm-home-card" ng-repeat="item in userInfoitems ">
+        <div class="row padding-big-horizontal text-size-small">
+          <div class="col col-20 col-center no-padding">
+            <div class="col col-80 col-offset-10 no-padding col-center">
+              <img src="img/adam.jpg" class="hm-border-round margin-normal-top">
+            </div>
+          </div>
+          <div class="col col-80 col-center">
+            <p class="color-dark-strong margin-normal-bottom text-overflow" >
+              <span class="shop-nike" ng-bind="item.userInfo.userName"></span>
+              <span class="shop-status" ng-bind="analysisStatus(item.productInfo.productStatus)"></span>
+            </p>
+            <p class="color-dark-thin no-margin-bottom shop-time" ng-bind="getTime(item.productInfo.productPublishTime)"></p>
           </div>
         </div>
-        <div class="col col-80 col-center">
-          <p class="color-dark-strong margin-normal-bottom text-overflow" >
-            <span class="shop-nike">张三</span>
-            <span class="shop-status">已解决</span>
-          </p>
-          <p class="color-dark-thin no-margin-bottom shop-time" >4小时前</p>
-        </div>
-      </div>
-      <p class="shop-title">[求购]标题</p>
-      <p class="shop-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-      <div class="row text-size-smaller color-dark-strong shop-bottom">
-        <div class="col col-60 text-overflow color-positive">
-          <i class="icon iconfont ion-hm-normal-local"></i>来自<span ng-bind="zxItem.productInfo.productCity"></span>
-        </div>
-        <div class="col col-40 text-right padding-big-right">
-          <i class="icon iconfont ion-hm-normal-local margin-small-right"></i><span ng-bind="zxItem.productInfo.readers"></span>
-          <i class="icon iconfont ion-hm-normal-local margin-small-right margin-big-left"></i><span ng-bind="zxItem.productInfo.replays"></span>
+        <p class="shop-title">[求购]标题</p>
+        <p class="shop-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+        <div class="row text-size-smaller color-dark-strong shop-bottom">
+          <div class="col col-60 text-overflow color-positive">
+            <i class="icon iconfont ion-hm-normal-local"></i>来自<span ng-bind="zxItem.productInfo.productCity"></span>
+          </div>
+          <div class="col col-40 text-right padding-big-right">
+            <i class="icon iconfont ion-hm-normal-local margin-small-right"></i><span ng-bind="zxItem.productInfo.readers"></span>
+            <i class="icon iconfont ion-hm-normal-local margin-small-right margin-big-left"></i><span ng-bind="zxItem.productInfo.replays"></span>
+          </div>
         </div>
       </div>
     </div>
+
+    <!--上拉刷新-->
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
   </ion-content>
 
   <script id="my-popover.html" type="text/ng-template">

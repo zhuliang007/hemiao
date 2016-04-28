@@ -9,4 +9,24 @@ angular.module('shoppings.services', [])
         return data;
       })
     }
+
+    //下拉刷新
+    doRefresher = function(){
+      return $http.get("json/zxHome.json").success(function(data){
+        return data;
+      })
+    }
+
+    //刷新列表
+    doListRefresher = function(value){
+      return $http.post("json/zxHome.json","",function(data){
+        return data;
+      })
+    }
+
+    loadMore = function(){
+      return $http.post("json/zxHome.json","",function(data){
+        return data;
+      })
+    }
   }])
