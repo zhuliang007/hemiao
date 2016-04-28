@@ -1,0 +1,94 @@
+/*购物*/
+.shopping-popover > .popover-arrow:after {
+  background-color: #535353;
+}
+
+@media screen and (min-height: 400px) and (max-height: 500px) {
+  .shopping-status {
+    text-align: center;
+    border-bottom: 1px solid #737373;
+    color: white;
+    height: 20px;
+    margin-top: 5px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-height: 500px) and (max-height: 600px) {
+  .shopping-status {
+    text-align: center;
+    border-bottom: 1px solid #737373;
+    color: white;
+    height: 25px;
+    margin-top: 5px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-height: 600px) and (max-height: 700px) {
+  .shopping-status {
+    text-align: center;
+    border-bottom: 1px solid #737373;
+    color: white;
+    height: 31px;
+    margin-top: 8px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .shopping-status {
+    text-align: center;
+    border-bottom: 1px solid #737373;
+    color: white;
+    height: 35px;
+    margin-top: 10px;
+    line-height: 2;
+  }
+}
+
+.platform-ios .popover .scroll-content {
+  margin: 0px;
+}
+
+.shopping-title .title {
+  font-size: 24px;
+  font-style: normal;
+  color: white;
+}
+
+.shop-content {
+  font-size: 14px;
+  color: #9f9f9f;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.shop-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.shop-bottom {
+  border-top: 1px solid #f0f0f0;
+  width: 94%;
+  margin-left: 10px;
+}
+
+.shop-nike {
+  width: 80%;
+  display: block;
+  float: left;
+}
+
+.shop-status{
+  width:20%;
+  color:#9f9f9f;
+}
+
+.shop-time{
+  font-size:12px;
+}

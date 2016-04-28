@@ -38,6 +38,7 @@ angular.module('shoppings.controllers', [])
 
     //触发选择事件
     $scope.clickStatus = function(value){
+      //增加触发事件加载求购列表逻辑
       $scope.popover.hide();
     }
   }])
