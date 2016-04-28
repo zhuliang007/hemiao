@@ -1,0 +1,40 @@
+/*发布 模块*/
+
+
+/*发布选择*/
+.hm-publish-select{
+  position: absolute;
+  z-index:2;
+  bottom: 80px;
+  color: #FFFFFF;
+}
+
+.hm-publish-select-sale{
+  left: 30%;
+  left: calc(30% - 20px);
+  left: -webkit-calc(30% - 20px);
+}
+
+.hm-publish-select-shopping{
+  right: 30%;
+  right: calc(30% - 20px);
+  right: -webkit-calc(30% - 20px);
+}
+
+.hm-publish-select > i{
+  border: 2px solid #FFFFFF;
+}
+
+.hm-publish-select-close{
+  position: absolute;
+  z-index:2;
+  background-color: #FFFFFF;
+  color: #FF4E72;
+  line-height: 36px;
+  width: 40px;
+  padding-bottom: 3px;
+  bottom: 20px;
+  left: 30%;
+  left: calc(50% - 20px);
+  left: -webkit-calc(50% - 20px);
+}
