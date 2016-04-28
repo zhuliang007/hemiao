@@ -344,6 +344,10 @@ img{
   background: #FF8A9A;
 }
 
+.hm-bar-gray{
+  background-color: #F5F5F5;
+}
+
 /*tabs样式*/
 .hm-tabs>.tabs{
   padding-top: 3px;

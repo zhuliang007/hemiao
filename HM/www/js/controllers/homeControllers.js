@@ -1,12 +1,8 @@
 angular.module("home.controllers",[])
-  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup","$httpServices",
-    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup,$httpServices) {
+  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup","$httpServices","$rootScope",
+    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup,$httpServices,$rootScope) {
 
       //头部广告设置带有轮播
-      /*$http.get("json/adHome.json").success(function(result) {
-       $scope.ads = result.ads;
-
-       })*/
       $httpServices.getObjectFromGet("json/adHome.json").success(function(result){
         $scope.ads = result.ads;
         $timeout(function(){
@@ -87,7 +83,7 @@ angular.module("home.controllers",[])
         }
       }
 
-      $scope.location = "北京";
+      $rootScope.location = "北京";
       //百度定位
       var map = new BMap.Map("bdMap");          // 创建地图实例
       var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
@@ -108,7 +104,7 @@ angular.module("home.controllers",[])
             var geoc = new BMap.Geocoder();
             geoc.getLocation(r.point, function(rs){
               var addComp = rs.addressComponents;
-              $scope.location = addComp.city.split("市")[0];
+              $rootScope.location = addComp.city.split("市")[0];
             });
           }
         },{enableHighAccuracy: true})

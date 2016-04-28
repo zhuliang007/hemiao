@@ -24,20 +24,9 @@ angular.module("modal.services",[])
           break;
         case 3:
           $modal.openModal(config.modals.cityModal.modal);
+          $rootScope.reset();
               break;
       }
-    }
-
-    $rootScope.goPublish = function(publishType){
-      switch (publishType){
-        case 1:
-          $state.go(config.controllers.publishSale.name)
-          break;
-        case 2:
-          $state.go(config.controllers.publishShopping.name)
-          break;
-      }
-      $rootScope.closeModal(1);
     }
 
     $rootScope.closeModal = function(modalType) {
@@ -61,6 +50,19 @@ angular.module("modal.services",[])
     $modal.closeModal = function(modal) {
       $modal[modal].hide();
     };
+
+
+    $rootScope.goPublish = function(publishType){
+      switch (publishType){
+        case 1:
+          $state.go(config.controllers.publishSale.name)
+          break;
+        case 2:
+          $state.go(config.controllers.publishShopping.name)
+          break;
+      }
+      $rootScope.closeModal(1);
+    }
 
     return $modal;
 

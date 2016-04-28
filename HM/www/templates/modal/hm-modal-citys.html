@@ -1,5 +1,12 @@
-<ion-modal-view>
+<ion-modal-view ng-controller="cityCtrl">
+  <ion-header-bar align-title="center" class="hm-bar-gray item-input-inset">
+    <div class="buttons">
+      <button class="button color-dark-normal" ng-click="closeModal(3)"><i class="icon iconfont ion-close"></i></button>
+    </div>
+    <label class="item-input-wrapper bg-color-white">
+      <input type="text" placeholder="输入城市名或首字母查询" class="text-center" ng-model="citySearch">
+    </label>
+  </ion-header-bar>
   <ion-content>
-    Hello City
   </ion-content>
 </ion-modal-view>
