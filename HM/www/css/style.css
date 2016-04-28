@@ -507,28 +507,6 @@ img{
 .hm-home-card + .hm-home-card{
   border-top: 1px solid #DDDDDD;
 }
-/*购物*/
-.shopping-popover >.popover-arrow:after{
-  background-color: #535353;
-}
-
-.shopping-status{
-  text-align: center;
-  border-bottom: 1px solid #737373;
-  color: white;
-  height: 34px;
-  line-height:2;
-}
-
-.platform-ios .popover .scroll-content{
-  margin:0px;
-}
-.shopping-title .title{
-  font-size: 24px;
-  font-style: normal;
-  color:white;
-}
-
 
 /*发布*/
 .hm-publish-select{
@@ -569,6 +547,7 @@ img{
   left: calc(50% - 20px);
   left: -webkit-calc(50% - 20px);
 }
+
 
 
 
