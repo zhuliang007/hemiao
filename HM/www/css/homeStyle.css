@@ -89,3 +89,34 @@
 .hm-home-card + .hm-home-card{
   border-top: 1px solid #DDDDDD;
 }
+
+
+/*城市选择模块*/
+.item-location,
+.item-title,
+.item-value{
+  border:none;
+}
+
+.list ion-list:first-child>.list>.item-value:first-child{
+  border:none;
+}
+
+.list>.item-value:first-child{
+  border-top: 1px solid #C8C7CC;
+}
+
+.item-value{
+  margin-top: 0px!important;
+}
+
+.item-value + .item-value{
+  border-top: 1px solid #C8C7CC;
+}
+
+.item-title{
+  background: #DFDFDF!important;
+  padding-bottom: 5px!important;
+  padding-top: 6px!important;
+}
+

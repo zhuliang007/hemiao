@@ -37,17 +37,17 @@ img{
 
 .padding-normal-bottom,
 .padding-normal-vertical{
-  padding-bottom: 2px!important;
+  padding-bottom: 5px!important;
 }
 
 .padding-normal-left,
 .padding-normal-horizontal{
-  padding-left: 2px!important;
+  padding-left: 5px!important;
 }
 
 .padding-normal-right,
 .padding-normal-horizontal{
-  padding-right: 2px!important;
+  padding-right: 5px!important;
 }
 
 .padding-normal{

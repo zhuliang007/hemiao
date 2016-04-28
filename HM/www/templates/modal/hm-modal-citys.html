@@ -7,6 +7,29 @@
       <input type="text" placeholder="输入城市名或首字母查询" class="text-center" ng-model="citySearch">
     </label>
   </ion-header-bar>
-  <ion-content>
+  <ion-content class="bg-color-main">
+    <div class="bg-color-white">
+      <ion-list>
+        <ion-item class="padding-big-vertical color-dark-thin item-location margin-big-right text-size-normal" ng-if="citySearch==''">
+          <span ng-bind="location" class="margin-big-right color-dark-normal"></span>当前定位
+        </ion-item>
+        <ion-list ng-if="citySearch==''">
+          <ion-item class="item-divider margin-big-right padding-big-left text-size-small item-title">
+            <span ng-bind="hotCities.targetValue"></span>
+          </ion-item>
+          <ion-item class="padding-big-vertical padding-small-left margin-big-horizontal text-size-normal item-value color-dark-strong" ng-repeat="cityItem in hotCities.cityItems track by $index" ng-click="changeCity(cityItem)">
+            <span ng-bind="cityItem.cityName"></span>
+          </ion-item>
+        </ion-list>
+        <ion-list ng-repeat="cityData in cityDatas track by $index">
+          <ion-item class="item-divider margin-big-right padding-big-left text-size-small item-title" ng-if="citySearch==''">
+            <span ng-bind="cityData.targetName"></span>
+          </ion-item>
+          <ion-item class="padding-big-vertical padding-small-left margin-big-horizontal text-size-normal item-value color-dark-strong" ng-repeat="cityItem in cityData.cityItems | cityFilter:citySearch" ng-click="changeCity(cityItem)">
+            <span ng-bind="cityItem.cityName"></span>
+          </ion-item>
+        </ion-list>
+      </ion-list>
+    </div>
   </ion-content>
 </ion-modal-view>
