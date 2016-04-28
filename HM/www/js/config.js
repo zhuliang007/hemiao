@@ -23,6 +23,11 @@ var config = {
       modal:"loginModal",
       templateUrl:"templates/modal/hm-modal-login.html",
       animation:"slide-in-up"
+    },
+    cityModal:{
+      modal:"cityModal",
+      templateUrl:"templates/modal/hm-modal-citys.html",
+      animation:"slide-in-up"
     }
   },
   loading:{

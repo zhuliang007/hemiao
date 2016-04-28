@@ -1,9 +1,13 @@
 angular.module("home.controllers",[])
-  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup",
-    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup) {
+  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup","$httpServices",
+    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup,$httpServices) {
 
       //头部广告设置带有轮播
-      $http.get("json/adHome.json").success(function(result) {
+      /*$http.get("json/adHome.json").success(function(result) {
+       $scope.ads = result.ads;
+
+       })*/
+      $httpServices.getObjectFromGet("json/adHome.json").success(function(result){
         $scope.ads = result.ads;
         $timeout(function(){
           var swiperOption = $scope.ads.length>1 ?
@@ -24,8 +28,10 @@ angular.module("home.controllers",[])
           $swiper.init(".swiper-ad-home",swiperOption);
         },500)
       })
+
+
       //求购信息
-      $http.get("json/qgHome.json").success(function(result) {
+      $httpServices.getObjectFromGet("json/qgHome.json").success(function(result) {
         $scope.qgGroups = result.qgs;
         $timeout(function(){
           var swiperOption = $scope.qgGroups.length>1 ?
@@ -70,7 +76,7 @@ angular.module("home.controllers",[])
       }
 
       function getNewProduct(){
-        $http.get("json/zxHome.json").success(function(result) {
+        $httpServices.getObjectFromGet("json/zxHome.json").success(function(result) {
           addNewItem(result.zxs);
         });
       }

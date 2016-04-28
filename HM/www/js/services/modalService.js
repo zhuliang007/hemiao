@@ -22,6 +22,9 @@ angular.module("modal.services",[])
         case 2:
           $modal.openModal(config.modals.loginModal.modal);
           break;
+        case 3:
+          $modal.openModal(config.modals.cityModal.modal);
+              break;
       }
     }
 
@@ -45,11 +48,14 @@ angular.module("modal.services",[])
         case 2:
           $modal.closeModal(config.modals.loginModal.modal);
           break;
+        case 3:
+          $modal.closeModal(config.modals.cityModal.modal);
+          break;
       }
     }
 
     $modal.openModal = function(modal){
-      this[modal].show();
+      $modal[modal].show();
     }
 
     $modal.closeModal = function(modal) {
