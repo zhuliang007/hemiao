@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <a class="bg-color-white padding-horizontal block color-dark-strong no-text-decoration" href="#/tabs/shopping">
+    <div class="bg-color-white padding-horizontal">
       <div class="row hm-border-normal-bottom">
         <div class="col"><div class="text-center"><i class="icon iconfont ion-hm-tuijian hm-home-type bg-color-yellow"></i></div><div class="text-center color-dark-normal margin-small-top">官方推荐</div></div>
         <div class="col"><div class="text-center"><i class="icon iconfont ion-hm-pram hm-home-type bg-color-main-green"></i></div><div class="text-center color-dark-normal margin-small-top">宝宝用品</div></div>
@@ -37,16 +37,16 @@
           </div>
         </div>
         <div class="col">
-          <div class="swiper-container swiper-qg-home">
+          <a class="swiper-container swiper-qg-home block color-dark-strong no-text-decoration"  href="#/tabs/shopping">
             <div class="swiper-wrapper">
               <div class="swiper-slide" ng-repeat="qgItems in qgGroups track by $index">
                 <p class="hm-home-qg-item" ng-repeat="qgItem in qgItems track by $index"><span ng-bind="qgItem.special"></span><span ng-bind="qgItem.title"></span></p>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
-    </a>
+    </div>
 
     <div class="hm-home-zx">
       <div class="line"></div>

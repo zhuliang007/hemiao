@@ -81,6 +81,7 @@ angular.module("home.controllers",[])
         }
       }
 
+      $scope.location = "北京";
       //百度定位
       var map = new BMap.Map("bdMap");          // 创建地图实例
       var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
@@ -89,7 +90,7 @@ angular.module("home.controllers",[])
       map.addControl(new BMap.ScaleControl());
       map.addControl(new BMap.OverviewMapControl());
       map.addControl(new BMap.MapTypeControl());
-      $scope.location = "北京";
+
       getLocation();
       function getLocation(){
         var geolocation = new BMap.Geolocation();
