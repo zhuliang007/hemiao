@@ -28,7 +28,6 @@ angular.module('shoppings.controllers', [])
     initList("scroll.init");
 
     //筛选条件弹出框
-    var template = '';
     $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html',{
       scope:$scope
     }).then(function(popover){
@@ -89,7 +88,7 @@ angular.module('shoppings.controllers', [])
     };
 
   }])
-  .controller('shopDetailCtrl',['$scope','$state',function($scope,$state){
+  .controller('shopDetailCtrl',['$scope','$state','$ionicModal',function($scope,$state,$ionicModal){
 
     //显示隐藏官方推荐,后续要根据真实数据调整
     if($state.params.detailId=='里斯'){
@@ -101,5 +100,34 @@ angular.module('shoppings.controllers', [])
     $scope.shopBack = function(){
       $state.go("tabs.shopping");
     }
-    console.log($state.params.detailId);
+
+    $ionicModal.fromTemplateUrl('shop-share-modal.html', {
+      scope: $scope,
+      animation: ''
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+    $scope.openModal = function() {
+      $scope.modal.show();
+    };
+
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+
+    // Execute action on hide modal
+    $scope.$on('modal.hidden', function() {
+      // Execute action
+    });
+
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+      // Execute action
+    });
   }])
