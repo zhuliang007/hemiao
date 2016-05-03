@@ -18,10 +18,10 @@
       {
         "targetName":"A",
         "cityItems":[
-          {"cityName":"A1","cityValue":"1001","filter":"a1"},
-          {"cityName":"A2","cityValue":"1002","filter":"a2"},
+          {"cityName":"A1","cityValue":"1001","filter":"a1;shanghai;上海"},
+          {"cityName":"A2","cityValue":"1002"},
           {"cityName":"A3","cityValue":"1003","filter":"a1"},
-          {"cityName":"A4","cityValue":"1004","filter":"a3"},
+          {"cityName":"A4","cityValue":"1004"},
           {"cityName":"A5","cityValue":"1005","filter":"a5"},
           {"cityName":"A6","cityValue":"1006","filter":"a3"},
           {"cityName":"A7","cityValue":"1007","filter":"a5"},
@@ -31,40 +31,40 @@
       {
         "targetName":"B",
         "cityItems":[
-          {"cityName":"B1","cityValue":"1001"},
-          {"cityName":"B2","cityValue":"1002"},
-          {"cityName":"B3","cityValue":"1003"},
-          {"cityName":"B4","cityValue":"1004"},
-          {"cityName":"B5","cityValue":"1005"},
-          {"cityName":"B6","cityValue":"1006"},
-          {"cityName":"B7","cityValue":"1007"},
-          {"cityName":"B8","cityValue":"1008"}
+          {"cityName":"B1","cityValue":"1001","filter":"b1"},
+          {"cityName":"B2","cityValue":"1002","filter":"b6"},
+          {"cityName":"B3","cityValue":"1003","filter":"b3"},
+          {"cityName":"B4","cityValue":"1004","filter":"b5"},
+          {"cityName":"B5","cityValue":"1005","filter":"b1"},
+          {"cityName":"B6","cityValue":"1006","filter":"b4"},
+          {"cityName":"B7","cityValue":"1007","filter":"b1"},
+          {"cityName":"B8","cityValue":"1008","filter":"b2"}
         ]
       },
       {
         "targetName":"C",
         "cityItems":[
-          {"cityName":"C1","cityValue":"1001"},
-          {"cityName":"C2","cityValue":"1002"},
-          {"cityName":"C3","cityValue":"1003"},
-          {"cityName":"C4","cityValue":"1004"},
-          {"cityName":"C5","cityValue":"1005"},
-          {"cityName":"C6","cityValue":"1006"},
-          {"cityName":"C7","cityValue":"1007"},
-          {"cityName":"C8","cityValue":"1008"}
+          {"cityName":"C1","cityValue":"1001","filter":"c2"},
+          {"cityName":"C2","cityValue":"1002","filter":"c1"},
+          {"cityName":"C3","cityValue":"1003","filter":"c5"},
+          {"cityName":"C4","cityValue":"1004","filter":"c1"},
+          {"cityName":"C5","cityValue":"1005","filter":"c4"},
+          {"cityName":"C6","cityValue":"1006","filter":"c1"},
+          {"cityName":"C7","cityValue":"1007","filter":"c2"},
+          {"cityName":"C8","cityValue":"1008","filter":"c5"}
         ]
       },
       {
         "targetName":"D",
         "cityItems":[
-          {"cityName":"D1","cityValue":"1001"},
-          {"cityName":"D2","cityValue":"1002"},
-          {"cityName":"D3","cityValue":"1003"},
-          {"cityName":"D4","cityValue":"1004"},
-          {"cityName":"D5","cityValue":"1005"},
-          {"cityName":"D6","cityValue":"1006"},
-          {"cityName":"D7","cityValue":"1007"},
-          {"cityName":"D8","cityValue":"1008"}
+          {"cityName":"D1","cityValue":"1001","filter":"d3"},
+          {"cityName":"D2","cityValue":"1002","filter":"d1"},
+          {"cityName":"D3","cityValue":"1003","filter":"d3"},
+          {"cityName":"D4","cityValue":"1004","filter":"d1"},
+          {"cityName":"D5","cityValue":"1005","filter":"d3"},
+          {"cityName":"D6","cityValue":"1006","filter":"d4"},
+          {"cityName":"D7","cityValue":"1007","filter":"d1"},
+          {"cityName":"D8","cityValue":"1008","filter":"d2"}
         ]
       }
     ]
