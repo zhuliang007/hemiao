@@ -24,7 +24,7 @@ angular.module("modal.services",[])
           break;
         case 3:
           $modal.openModal(config.modals.cityModal.modal);
-          $rootScope.reset();
+          $rootScope.resetCity();
               break;
       }
     }

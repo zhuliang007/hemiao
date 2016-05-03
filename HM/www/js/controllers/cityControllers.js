@@ -1,7 +1,7 @@
 angular.module("city.controllers",['city.filters'])
   .controller("cityCtrl",["$scope","$rootScope","$httpServices","$location","$anchorScroll",function($scope,$rootScope,$httpServices,$location,$anchorScroll){
     $scope.master = "";
-    $rootScope.reset = function(){
+    $rootScope.resetCity = function(){
       $scope.citySearch = angular.copy($scope.master);
     }
 

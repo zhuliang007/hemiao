@@ -291,8 +291,12 @@ img{
 
 .hm-border-round{
   -webkit-border-radius:50%;
-  -moz-border-radius:50%;
   border-radius:50%;
+}
+
+.hm-border-small-radius{
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
 
 

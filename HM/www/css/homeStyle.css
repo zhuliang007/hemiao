@@ -77,10 +77,8 @@
   z-index: 2;
   background-color: #F5F5F5;
   color: #FF4E72;
-  left: 50%;
   left: calc(50% - 45px);
   left: -webkit-calc(50% - 45px);
-  top: 20%;
   top: calc(20% + 5px);
   top: -webkit-calc(20% + 5px);
   padding: 0px 20px;
@@ -124,7 +122,6 @@
   position: absolute;
   z-index:999;
   right: 0px;
-  bottom: 0px;
   bottom: calc(50% - 220px);
   background-color: transparent;
   text-align: center;
