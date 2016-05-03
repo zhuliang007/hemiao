@@ -81,6 +81,13 @@ var config = {
       url:"/publish/shop",
       name:"publishShopping",
       controller:"publishShoppingCtrl"
+    },
+    //首页搜索
+    searchHome:{
+      templateUrl:"templates/home/searchHome.html",
+      url:"searchHome",
+      name:"searchHome",
+      controller:"searchHomeCtrl"
     }
   },
   //求购商品详情

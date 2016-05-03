@@ -1,6 +1,6 @@
 angular.module("home.controllers",[])
-  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup","$httpServices","$rootScope",
-    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup,$httpServices,$rootScope) {
+  .controller('HomeCtrl', ["$scope","$timeout","$swiper","$http","$toast","$ionicPopup","$httpServices","$rootScope","$state",
+    function($scope, $timeout,$swiper,$http,$toast,$ionicPopup,$httpServices,$rootScope,$state) {
 
       //头部广告设置带有轮播
       $httpServices.getObjectFromGet("json/adHome.json").success(function(result){
@@ -110,4 +110,7 @@ angular.module("home.controllers",[])
         },{enableHighAccuracy: true})
       }
 
+      $scope.goSearch = function(){
+        $state.go("searchHome");
+      }
     }])
