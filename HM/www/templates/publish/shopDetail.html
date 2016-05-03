@@ -7,7 +7,7 @@
   <ion-content class="bg-color-main">
     <div class="bg-color-white margin-big-bottom hm-home-card-groups" >
       <div class="row shop-detail-title" >
-        <span class="col col-70">[求购]标题</span>
+        <span class="col col-70">[求购]标题标题标题标题标题标题标题标题标题标题</span>
         <span class="col col-20 icon ion-ios-eye-outline">1234</span>
       </div>
       <div class="row shop-interval"></div>
@@ -89,7 +89,13 @@
   <ion-footer-bar class="shop-button" style="padding:0px;">
       <div class="col col-20 button button-icon icon ion-chatbubble-working" ></div>
       <div class="col col-20 button button-icon icon ion-arrow-graph-up-right"></div>
-      <div class="col col-20 button button-icon icon ion-share">分享</div>
+      <div class="col col-20 button button-icon icon ion-share" ng-click="openModal($event)">分享</div>
       <div class="col col-40 button shop-recommend">推荐给TA</div>
   </ion-footer-bar>
+
+  <script id="shop-share-modal.html" type="text/ng-template">
+    <ion-modal-view >
+    </ion-modal-view>
+  </script>
+
 </ion-view>
