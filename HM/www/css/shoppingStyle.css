@@ -79,9 +79,9 @@
 }
 
 .shop-nike {
-  width: 80%;
+  width: 20%;
   font-weight: bolder;
-  font-size:20px;
+  font-size: 20px;
   display: block;
   float: left;
 }
@@ -160,50 +160,90 @@
 .shop-userInfo {
   margin-top: 5px;
   padding: 0px;
-  border-bottom:1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
 }
 
-.shop-detail-content{
+.shop-detail-content {
   font-size: 16px;
   color: black;
-  margin:22px 10px 12px 15px;
+  margin: 22px 10px 12px 15px;
 }
 
-.shop-detail-time{
-  padding:2px 0px 0px 15px;
-  color:#969696;
-  font-size:14px;
+.shop-detail-time {
+  padding: 2px 0px 0px 15px;
+  color: #969696;
+  font-size: 14px;
 }
 
-.no-margin{
-  margin:0px;
+.no-margin {
+  margin: 0px;
 }
 
-.shop-detail-bottom{
+.shop-detail-bottom {
   border-top: 1px solid #f0f0f0;
   width: 94%;
   margin-left: 10px;
-  padding:10px 10px 10px 0px;
+  padding: 10px 10px 10px 0px;
 }
 
-.shop-detail-recommendImg{
-  margin:12px 0px 0px 0px;
-  padding-top:5px;
-  padding-left:5px;
-  border-left:1px solid #EFEFEF;
+.shop-detail-recommendImg {
+  margin: 12px 0px 0px 0px;
+  padding-top: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #EFEFEF;
 }
 
-.authority-recommend{
-  width:30%;
-  border-radius:5px;
+.authority-recommend {
+  width: 30%;
+  border-radius: 5px;
   background-color: #FE4E72;
-  color:white;
-  margin-top:10px;
-  text-align:center;
-  font-weight:bolder;
-  font-size:14px;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 14px;
 }
 
-.recommend-content{
+.recommend-content {
   background-color: white;
 }
+
+.shop-container {
+  border: 0px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.shop-replay-left {
+  float: left;
+  width: 80%;
+}
+
+.shop-replay-right {
+  float: right;
+  width: 20%;
+}
+
+.shop-replay img {
+  width: 70% !important;
+}
+
+.shop-replay > div:first-child {
+  text-align: center;
+}
+
+.shop-replay .shop-time {
+  display: block;
+  line-height: 26px;
+  color:#9E9E9E;
+}
+
+.shop-replay-left{
+  background-color: white;
+}
+
+.shop-replay-left .shop-detail-content{
+  margin:0px;
+  padding:0px;
+}
+
