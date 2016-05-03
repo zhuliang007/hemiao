@@ -80,70 +80,130 @@
 
 .shop-nike {
   width: 80%;
+  font-weight: bolder;
+  font-size:20px;
   display: block;
   float: left;
 }
 
-.shop-status{
-  width:20%;
-  color:#9f9f9f;
+.shop-status {
+  width: 20%;
+  color: #9f9f9f;
 }
 
-.shop-time{
-  font-size:12px;
+.shop-time {
+  font-size: 12px;
 }
 
 .shop-button .icon:before, .shop-button .button.button-icon:before, .shop-button .button.button-icon.icon-left:before, .shop-button .button.button-icon.icon-right:before, .shop-button button.button-icon .icon:before, .shop-button button.button-icon:before, .shop-button button.button-icon.icon-left:before, .shop-button button.button-icon.icon-right:before {
   font-size: 20px;
-  line-height:42px;
+  line-height: 42px;
 }
 
-.shop-button .button.button-icon{
-  font-size:1px;
-  line-height:42px;
-  min-height:100%;
+.shop-button .button.button-icon {
+  font-size: 1px;
+  line-height: 42px;
+  min-height: 100%;
 
 }
-.shop-button > .button + .button:last-child{
-  top:0;
-  right:0;
-  bottom:0;
+
+.shop-button > .button + .button:last-child {
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
-.shop-button .button{
-  font-size:15px;
-  line-height:42px;
+
+.shop-button .button {
+  font-size: 15px;
+  line-height: 42px;
 }
-.shop-recommend{
+
+.shop-recommend {
   background-color: #FF4E72;
-  color:white;
-  border-radius:0px;
+  color: white;
+  border-radius: 0px;
 }
 
-.shop-recommend:hover{
-  color:white;
+.shop-recommend:hover {
+  color: white;
 }
 
-.shop-detail-title{
-  height:60px;
+.shop-detail-title {
+  height: 60px;
 }
 
-.shop-detail-title >span{
+.shop-detail-title > span {
   line-height: 33px;
 }
 
-.shop-detail-title >span:first-child{
-  font-size:20px;
+.shop-detail-title > span:first-child {
+  font-size: 20px;
   font-weight: bolder;
 }
-.shop-detail-title >span:last-child{
-  font-size:16px;
-  color:#9F9F9F;
+
+.shop-detail-title > span:last-child {
+  font-size: 16px;
+  color: #9F9F9F;
 }
 
-.shop-contact{
+.shop-contact {
   border-left: 1px solid #E6E6E6;
-  border-radius:0px;
+  border-radius: 0px;
   background-color: white;
   min-width: 100%;
 }
 
+.shop-interval {
+  background-color: #F1F1F1
+}
+
+.shop-userInfo {
+  margin-top: 5px;
+  padding: 0px;
+  border-bottom:1px solid #EFEFEF;
+}
+
+.shop-detail-content{
+  font-size: 16px;
+  color: black;
+  margin:22px 10px 12px 15px;
+}
+
+.shop-detail-time{
+  padding:2px 0px 0px 15px;
+  color:#969696;
+  font-size:14px;
+}
+
+.no-margin{
+  margin:0px;
+}
+
+.shop-detail-bottom{
+  border-top: 1px solid #f0f0f0;
+  width: 94%;
+  margin-left: 10px;
+  padding:10px 10px 10px 0px;
+}
+
+.shop-detail-recommendImg{
+  margin:12px 0px 0px 0px;
+  padding-top:5px;
+  padding-left:5px;
+  border-left:1px solid #EFEFEF;
+}
+
+.authority-recommend{
+  width:30%;
+  border-radius:5px;
+  background-color: #FE4E72;
+  color:white;
+  margin-top:10px;
+  text-align:center;
+  font-weight:bolder;
+  font-size:14px;
+}
+
+.recommend-content{
+  background-color: white;
+}

@@ -10,10 +10,11 @@
         <span class="col col-70">[求购]标题</span>
         <span class="col col-20 icon ion-ios-eye-outline">1234</span>
       </div>
-      <div class="row" style="background-color: #F1F1F1"></div>
-      <div class="row" style="margin-top:5px;padding:0px;">
+      <div class="row shop-interval"></div>
+      <!--用户信息-->
+      <div class="row shop-userInfo" >
         <div class="col col-20 col-center no-padding">
-          <div class="col col-80 col-offset-10 no-padding col-center">
+          <div class="col col-80 col-offset-10 col-center">
             <img src="img/adam.jpg" class="hm-border-round margin-normal-top">
           </div>
         </div>
@@ -25,6 +26,40 @@
         <div class="col col-30 col-center">
           <div class="shop-contact button icon">联系TA</div>
         </div>
+      </div>
+      <!--内容-->
+      <p class="shop-detail-content">
+        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        内容内容内容内容内容
+      </p>
+      <p class="shop-detail-time">
+        4小时前
+      </p>
+      <!--地址-->
+      <div class="row text-size-smaller color-dark-strong shop-detail-bottom">
+        <div class="col col-60 text-overflow color-positive no-padding no-margin">
+          <i class="icon iconfont ion-hm-normal-local "></i>来自<span >12121|sds</span>
+        </div>
+      </div>
+      <div class="row shop-interval"></div>
+      <div class="row" ng-show="{{isShow}}" >
+        <div class="col col-80">
+          <p class="authority-recommend">
+            官方推荐
+          </p>
+          <p class="recommend-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+        </div>
+        <div class="col col-20 col-center">
+          <div class="shop-detail-recommendImg ">
+            <img src="img/ben.png" >
+          </div>
+        </div>
+      </div>
+      <div class="row shop-interval"></div>
+      <div>
+        <div style="border:1px solid black">1</div>
+        <div style="border:1px solid black">2</div>
+        <div style="border:1px solid black">3</div>
       </div>
     </div>
   </ion-content>
