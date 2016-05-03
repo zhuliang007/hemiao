@@ -91,6 +91,13 @@ angular.module('shoppings.controllers', [])
   }])
   .controller('shopDetailCtrl',['$scope','$state',function($scope,$state){
 
+    //显示隐藏官方推荐,后续要根据真实数据调整
+    if($state.params.detailId=='里斯'){
+      $scope.isShow=false;
+    }else{
+      $scope.isShow=true;
+    }
+
     $scope.shopBack = function(){
       $state.go("tabs.shopping");
     }
