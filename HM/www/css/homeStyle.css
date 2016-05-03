@@ -120,3 +120,14 @@
   padding-top: 6px!important;
 }
 
+.anchorCity{
+  position: absolute;
+  z-index:999;
+  right: 0px;
+  bottom: 0px;
+  bottom: calc(50% - 220px);
+  background-color: transparent;
+  text-align: center;
+  color: #333333;
+}
+

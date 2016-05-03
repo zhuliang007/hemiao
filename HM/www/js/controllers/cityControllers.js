@@ -1,5 +1,5 @@
 angular.module("city.controllers",['city.filters'])
-  .controller("cityCtrl",["$scope","$rootScope","$httpServices",function($scope,$rootScope,$httpServices){
+  .controller("cityCtrl",["$scope","$rootScope","$httpServices","$location","$anchorScroll",function($scope,$rootScope,$httpServices,$location,$anchorScroll){
     $scope.master = "";
     $rootScope.reset = function(){
       $scope.citySearch = angular.copy($scope.master);
@@ -16,6 +16,17 @@ angular.module("city.controllers",['city.filters'])
       $rootScope.location = city.cityName;
       $rootScope.closeModal(3)
     }
+
+
+    $scope.anchorCity = function(x){
+      var newHash = 'anchor' + x;
+      if ($location.hash() !== newHash) {
+        $location.hash('anchor' + x);
+      } else {
+        $anchorScroll();
+      }
+    }
+
 
 
   }])

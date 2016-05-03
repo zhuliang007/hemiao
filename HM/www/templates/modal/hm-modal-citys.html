@@ -10,7 +10,7 @@
   <ion-content class="bg-color-main">
     <div class="bg-color-white">
       <ion-list>
-        <ion-item class="padding-big-vertical color-dark-thin item-location margin-big-right text-size-normal" ng-if="citySearch==''">
+        <ion-item class="padding-big-vertical color-dark-thin item-location margin-big-right text-size-normal" ng-if="citySearch==''" id="anchor#">
           <span ng-bind="location" class="margin-big-right color-dark-normal"></span>当前定位
         </ion-item>
         <ion-list ng-if="citySearch==''">
@@ -22,7 +22,7 @@
           </ion-item>
         </ion-list>
         <ion-list ng-repeat="cityData in cityDatas track by $index">
-          <ion-item class="item-divider margin-big-right padding-big-left text-size-small item-title" ng-if="citySearch==''">
+          <ion-item class="item-divider margin-big-right padding-big-left text-size-small item-title" ng-if="citySearch==''" id="anchor{{cityData.targetName}}">
             <span ng-bind="cityData.targetName"></span>
           </ion-item>
           <ion-item class="padding-big-vertical padding-small-left margin-big-horizontal text-size-normal item-value color-dark-strong" ng-repeat="cityItem in cityData.cityItems | cityFilter:citySearch" ng-click="changeCity(cityItem)">
@@ -32,4 +32,7 @@
       </ion-list>
     </div>
   </ion-content>
+  <div class="anchorCity">
+    <div ng-click="anchorCity(x)" ng-repeat="x in ['#','A','B','C','D','E','F','H','J','K','L','M','N','P','Q','R','S','T','W','X','Y','Z']">{{x}}</div>
+  </div>
 </ion-modal-view>
