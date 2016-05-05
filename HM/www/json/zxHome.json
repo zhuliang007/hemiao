@@ -3,7 +3,7 @@
     {
       "userInfo":{
         "userName":"shuhao1989",
-        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default1.png"
+        "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
         "productStatus":1,
@@ -14,34 +14,33 @@
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"}
-        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"},
-          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default3.png"}]
+        "productImages":[{"imgUrl":"img/test/100x100.png"}
+        ,{"imgUrl":"img/test/100x100.png"},
+          {"imgUrl":"img/test/100x100.png"}]
       }
     },
     {
       "userInfo":{
         "userName":"里斯",
-        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default2.png"
+        "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
         "productStatus":1,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
-        "productPublishTime":"2016-03-10 12:30:00",
+        "productPublishTime":"img/test/100x100.png",
         "productPrice":"3490",
         "productPriceSale":"",
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"}
-        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"},
-          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default1.png"}]
+        "productImages":[{"imgUrl":"img/test/100x100.png"}
+        ,{"imgUrl":"img/test/100x100.png"}]
       }
     },
     {
       "userInfo":{
         "userName":"王五",
-        "userHeaderImage":"http://192.168.100.67:8080/img/userHead/default3.png"
+        "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
         "productStatus":0,
@@ -52,9 +51,8 @@
         "productCity":"上海市 杨浦区 飞虹路568弄",
         "readers":"526",
         "replays":"665",
-        "productImages":[{"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"}
-        ,{"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"},
-          {"imgUrl":"http://192.168.100.67:8080/img/productImg/default2.png"}]
+        "productImages":[{"imgUrl":"img/test/100x100.png"}
+        ,{"imgUrl":"img/test/100x100.png"}]
       }
     }
   ]

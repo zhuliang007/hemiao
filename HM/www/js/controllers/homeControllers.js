@@ -5,6 +5,7 @@ angular.module("home.controllers",[])
       //头部广告设置带有轮播
       $httpServices.getObjectFromGet("json/adHome.json").success(function(result){
         $scope.ads = result.ads;
+        console.log($scope.ads)
         $timeout(function(){
           var swiperOption = $scope.ads.length>1 ?
           { direction: "horizontal",
@@ -26,6 +27,15 @@ angular.module("home.controllers",[])
       })
 
 
+      //计算图片控件的比例宽高
+      $scope.resizeImage = function(element,imageUrl,scale){
+        var element = document.getElementById(element);
+        var scaleOption = parseInt(scale.split(":")[0],10)/parseInt(scale.split(":")[1],10);
+        var $element = angular.element(element);
+        $element.css({"height":(element.offsetWidth/scaleOption)+"px"});
+        return {"background-image":"url("+imageUrl+")","-webkit-background-image":"url("+imageUrl+")"};
+      }
+
       //求购信息
       $httpServices.getObjectFromGet("json/qgHome.json").success(function(result) {
         $scope.qgGroups = result.qgs;
@@ -46,24 +56,6 @@ angular.module("home.controllers",[])
         },500)
       });
       initView();
-
-      $scope.getTime = function(time){
-        return $.format.prettyDate(time);
-      };
-
-      $scope.loadMore = function() {
-        getNewProduct();
-        $scope.$broadcast('scroll.infiniteScrollComplete');
-      };
-
-      $scope.$on('$stateChangeSuccess', function() {
-        $scope.loadMore();
-      });
-
-      $scope.doRefresh = function() {
-        initView();
-        $scope.$broadcast('scroll.refreshComplete');
-      };
 
       function initView(){
         $scope.zxItems = [];
@@ -110,7 +102,17 @@ angular.module("home.controllers",[])
         },{enableHighAccuracy: true})
       }
 
+      $scope.loadMore = function() {
+        getNewProduct();
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      };
+
+      $scope.$on('$stateChangeSuccess', function() {
+        $scope.loadMore();
+      });
+
       $scope.goSearch = function(){
         $state.go("searchHome");
       }
+
     }])

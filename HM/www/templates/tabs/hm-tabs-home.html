@@ -8,16 +8,16 @@
   </ion-header-bar>
   <div class="hm-zs-header"></div>
   <ion-content class="bg-color-main main-content">
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
-    </ion-refresher>
+    <!-- <ion-refresher
+       pulling-text="下拉刷新..."
+       on-refresh="doRefresh()">
+     </ion-refresher>-->
 
     <div id="bdMap" class="hide"></div>
 
     <div class="swiper-container swiper-ad-home margin-big-bottom">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" ng-repeat="ad in ads track by $index"><a><img ng-src={{ad.fileName}}></a></div>
+        <div class="swiper-slide" ng-repeat="ad in ads track by $index"><a class="bg-img" id="adImage{{$index}}" ng-style="resizeImage('adImage{{$index}}',ad.imageUrl,'3:1')"></a></div>
       </div>
       <div class="swiper-pagination swiper-pagination-ad-home">
       </div>
@@ -33,7 +33,7 @@
       <div class="row padding-big-top">
         <div class="col col-25 hm-border-normal-right">
           <div class="col-80 col-offset-10">
-            <img ng-src="img/qg.png">
+            <img ng-src="img/test/qg.png">
           </div>
         </div>
         <div class="col">
@@ -58,7 +58,7 @@
         <div class="row padding-big-horizontal text-size-small">
           <div class="col col-20 col-center no-padding">
             <div class="col col-80 col-offset-10 no-padding col-center">
-              <img ng-src="{{zxItem.userInfo.userHeaderImage}}" class="hm-border-round margin-normal-top">
+              <div class="hm-border-round margin-normal-top bg-img" id="userImage{{$index}}" ng-style="resizeImage('userImage{{$index}}',zxItem.userInfo.userHeaderImage,'1:1')"></div>
             </div>
           </div>
           <div class="col col-80 col-center">
@@ -66,9 +66,9 @@
             <p class="color-dark-thin no-margin-bottom text-overflow" ng-bind="getTime(zxItem.productInfo.productPublishTime)"></p>
           </div>
         </div>
-        <div class="row no-padding-bottom">
+        <div class="row padding-normal-top">
           <div class="col col-33 padding-small-horizontal no-padding-bottom" ng-repeat="productImage in zxItem.productInfo.productImages track by $index">
-            <img ng-src={{productImage.imgUrl}}>
+            <div class="bg-img" id="productImage{{$parent.$index+''+$index}}" ng-style="resizeImage('productImage{{$parent.$index+''+$index}}',productImage.imgUrl,'1:1')"></div>
           </div>
         </div>
         <p class="padding-big-horizontal margin-small-bottom color-dark-strong text-max-height-normal text-size-normal" ng-bind="zxItem.productInfo.productTitle"></p>
@@ -79,7 +79,6 @@
           </span>
           <span ng-if="zxItem.productInfo.productPriceSale === ''"><span ng-bind="zxItem.productInfo.productPrice"></span>
           </span>
-
         </p>
         <div class="row text-size-smaller color-dark-strong">
           <div class="col col-60 text-overflow color-positive">

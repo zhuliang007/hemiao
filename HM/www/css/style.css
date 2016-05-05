@@ -79,6 +79,78 @@ img{
   padding: 10px!important;
 }
 
+.padding-normal-pre-left,
+.padding-normal-pre-horizontal{
+  padding-left: 10%!important;
+}
+
+.padding-normal-pre-right,
+.padding-normal-pre-horizontal{
+  padding-right: 10%!important;
+}
+
+.padding-normal-pre-top,
+.padding-normal-pre-vertical{
+  padding-top: 10%!important;
+}
+
+.padding-normal-pre-bottom,
+.padding-normal-pre-vertical{
+  padding-bottom: 10%!important;
+}
+
+.padding-normal-pre{
+  padding: 10%!important;
+}
+
+.padding-small-pre-left,
+.padding-small-pre-horizontal{
+  padding-left: 5%!important;
+}
+
+.padding-small-pre-right,
+.padding-small-pre-horizontal{
+  padding-right: 5%!important;
+}
+
+.padding-small-pre-top,
+.padding-small-pre-vertical{
+  padding-top: 5%!important;
+}
+
+.padding-small-pre-bottom,
+.padding-small-pre-vertical{
+  padding-bottom: 5%!important;
+}
+
+.padding-small-pre{
+  padding: 5%!important;
+}
+
+.padding-big-pre-left,
+.padding-big-pre-horizontal{
+  padding-left: 20%!important;
+}
+
+.padding-big-pre-right,
+.padding-big-pre-horizontal{
+  padding-right: 20%!important;
+}
+
+.padding-big-pre-top,
+.padding-big-pre-vertical{
+  padding-top: 20%!important;
+}
+
+.padding-big-pre-bottom,
+.padding-big-pre-vertical{
+  padding-bottom: 20%!important;
+}
+
+.padding-big-pre{
+  padding: 20%!important;
+}
+
 .no-padding{
   padding: 0px!important;
 }
@@ -422,4 +494,13 @@ img{
 
 .main-content{
   padding-top: 0px!important;
+}
+
+.bg-img{
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
 }
