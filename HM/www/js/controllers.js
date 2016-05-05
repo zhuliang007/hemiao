@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['shoppings.controllers','home.controllers','city.controllers','searchHome.controllers','login.controllers'])
+angular.module('starter.controllers', ['shoppings.controllers','home.controllers','city.controllers','searchHome.controllers','login.controllers','productDetailCtrl'])
   .controller('StartCtrl', ["$scope","$state","$modal","$toast","$rootScope",function($scope,$state,$modal,$toast,$rootScope) {
     $state.go("tabs.home")
     $modal.init(config.modals.publishSelectModal.modal,config.modals.publishSelectModal.templateUrl);

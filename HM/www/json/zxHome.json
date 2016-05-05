@@ -6,6 +6,7 @@
         "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
+        "id":"123",
         "productStatus":1,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"2016-04-26 17:46:00",
@@ -25,6 +26,7 @@
         "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
+        "id":"124",
         "productStatus":1,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"img/test/100x100.png",
@@ -43,6 +45,7 @@
         "userHeaderImage":"img/test/100x100.png"
       },
       "productInfo":{
+        "id":"125",
         "productStatus":0,
         "productTitle":"苹果手机苹果手机苹果手机苹果手机",
         "productPublishTime":"2015-4-12 12:30:00",

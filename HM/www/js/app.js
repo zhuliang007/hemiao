@@ -118,4 +118,11 @@ angular.module('starter', ['ionic','ngCordova' ,'starter.controllers', 'starter.
         templateUrl:config.controllers.searchHome.templateUrl,
         controller:config.controllers.searchHome.controller
       })
+
+      .state(config.controllers.productDetail.name,{
+        url: config.controllers.productDetail.url,
+        templateUrl:config.controllers.productDetail.templateUrl,
+        controller:config.controllers.productDetail.controller,
+        cache:'false',
+      })
   });

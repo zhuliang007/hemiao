@@ -84,6 +84,10 @@
   padding: 0px 20px;
 }
 
+.hm-home-card{
+  display: block;
+}
+
 .hm-home-card + .hm-home-card{
   border-top: 1px solid #DDDDDD;
 }

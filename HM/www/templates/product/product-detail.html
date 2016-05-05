@@ -1,0 +1,82 @@
+<ion-view>
+    <ion-content class="bg-color-main">
+        <ion-slide-box class="product-slider-group" does-continue="false" auto-play="true" slide-interval="2000" show-pager={{showPager}} delegate-handle="slideBox1" pager-click="showProductImage(index)">
+            <ion-slide ng-repeat="image in product.images track by $index">
+                <div class="bg-img" ng-style="resizeImage('slider{{$index}}',image)" id="slider{{$index}}"></div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="bg-color-white color-dark-strong text-size-normal margin-big-bottom hm-border-gray-bottom">
+            <div class="row">
+                <div class="col col-80 col-center">
+                    <span class="bg-color-main-red hm-border-small-radius color-light-normal text-size-small margin-normal-right padding-normal-horizontal" ng-bind="product.targetGF" ng-if="product.isGF"></span><span ng-bind="product.title"></span>
+                </div>
+                <div class="col text-size-smaller text-right text-overflow color-dark-thin col-center">
+                    <i class="icon iconfont ion-hm-readers padding-small-right"></i><span ng-bind="product.readers"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col color-dark-thin">
+                    <span class="color-assertive margin-normal-right"><i class="icon iconfont ion-money"></i><span ng-bind="product.price1"></span></span>
+                    <span class="margin-big-right text-size-small text-relative"><i class="icon iconfont ion-money"></i><span ng-bind="product.price2"></span>
+                        <span class="text-decoration-through"></span>
+                    </span>
+                    <span ng-if="product.carriage == 0" class="text-size-small">(免运费)</span>
+                    <span ng-if="product.carriage != 0" class="text-size-small">(已含运费)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span ng-bind="product.description" class="text-size-small"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col color-dark-thin text-size-smaller">
+                    <span ng-bind="parseTime(product.publishTime)"></span>发布
+                </div>
+            </div>
+            <div class="row">
+                <div class="col no-padding product-detail-line">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col color-positive text-size-smaller">
+                    <i class="icon iconfont ion-hm-normal-local"></i>
+                    <span ng-bind="product.address1" class="padding-normal-right"></span>|
+                    <span ng-bind="product.address2" class="padding-normal-left"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-color-white text-size-normal color-dark-strong margin-big-bottom hm-border-gray-vertical">
+            <div class="col col-20 padding-big-horizontal col-center">
+                <div class="bg-img hm-border-round" id="user-header-image" ng-style="resizeImage('user-header-image',userInfo.userHeadImage)"></div>
+            </div>
+            <div class="col col-center">
+                <span ng-bind="userInfo.userName"></span>
+            </div>
+        </div>
+
+        <ion-list ng-if="replyList!=null&&replyList.length!=0">
+            <ion-item class="row" ng-repeat="reply in replyList track by $index">
+                <div class="col col-15 padding-big-horizontal">
+                    <div class="bg-img hm-border-round" ng-style="resizeImage('userHead{{$index}}',reply.userHeadImage)" id="userHead{{$index}}"></div>
+                </div>
+                <div class="col col-66 text-size-small color-dark-strong">
+                    <div ng-bind="reply.fromUserName"></div>
+                    <div class="margin-big-top">回复@<span ng-bind="reply.toUserName"></span>:<span class="text-line" ng-bind="reply.replyContent"></span></div>
+                </div>
+                <div class="col text-right text-size-smaller color-dark-thin">
+                    <span ng-bind="parseTime(reply.replyTime)"></span>
+                </div>
+            </ion-item>
+        </ion-list>
+
+
+        <!--<ion-infinite-scroll
+                on-infinite="loadMore()"
+                distance="1%"
+                immediate-check="false">
+        </ion-infinite-scroll>-->
+    </ion-content>
+</ion-view>

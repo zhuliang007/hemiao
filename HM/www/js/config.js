@@ -88,6 +88,13 @@ var config = {
       url:"searchHome",
       name:"searchHome",
       controller:"searchHomeCtrl"
+    },
+    //商品详情
+    productDetail:{
+      templateUrl:"templates/product/product-detail.html",
+      url:"/productDetail/:detailId",
+      name:"productDetail",
+      controller:"productDetailCtrl"
     }
   },
   //求购商品详情

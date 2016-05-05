@@ -54,7 +54,7 @@
     </div>
 
     <div class="hm-home-card-groups bg-color-white margin-big-bottom">
-      <div class="hm-home-card" ng-repeat="zxItem in zxItems track by $index">
+      <div class="hm-home-card no-text-decoration" ng-repeat="zxItem in zxItems track by $index" ui-sref="productDetail({detailId:zxItem.productInfo.id})">
         <div class="row padding-big-horizontal text-size-small">
           <div class="col col-20 col-center no-padding">
             <div class="col col-80 col-offset-10 no-padding col-center">

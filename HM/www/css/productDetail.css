@@ -1,0 +1,14 @@
+.product-detail-line{
+    height: 1px;
+    background-color: #D2D2D2;
+}
+
+.product-slider-group .slider-pager-page{
+    color: rgba(255,255,255,.7);
+    opacity: 1;
+}
+
+.product-slider-group .slider-pager-page.active{
+    color: #FF4E72;
+    color: rgba(255,78,114,.7);
+}

@@ -18,11 +18,10 @@
   text-rendering: auto;
   line-height: 1;
 }
-.ion-hm-normal-local:before { content: "\e607"; }
 .ion-hm-message:before { content: "\e611"; }
 .ion-hm-new-other:before { content: "\e600"; }
-.ion-hm-rmb:before { content: "\e605"; }
 .ion-hm-search:before { content: "\e612"; }
+.ion-money:before { content: "\e605"; }
 .ion-hm-jujia:before { content: "\e614"; }
 .ion-hm-heart:before { content: "\e603"; }
 .ion-hm-skin:before { content: "\e604"; }
@@ -37,7 +36,9 @@
 .ion-hm-phone:before { content: "\e601"; }
 .ion-hm-arrow-down:before { content: "\e60b"; }
 .ion-hm-suit-dress:before { content: "\e60d"; }
+.ion-hm-readers:before { content: "\e607"; }
 .ion-hm-read-number:before { content: "\e609"; }
 .ion-hm-personal:before { content: "\e602"; }
 .ion-hm-add:before { content: "\e60e"; }
 .ion-hm-tuijian:before { content: "\e615"; }
+.ion-hm-normal-local:before { content: "\e617"; }
